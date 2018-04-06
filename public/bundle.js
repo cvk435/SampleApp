@@ -27235,6 +27235,10 @@ var _reactRouter = __webpack_require__(98);
 
 var _reactRouterDom = __webpack_require__(30);
 
+var _navBar = __webpack_require__(237);
+
+var _navBar2 = _interopRequireDefault(_navBar);
+
 var _header = __webpack_require__(233);
 
 var _header2 = _interopRequireDefault(_header);
@@ -27243,7 +27247,7 @@ var _footer = __webpack_require__(234);
 
 var _footer2 = _interopRequireDefault(_footer);
 
-var _home = __webpack_require__(235);
+var _home = __webpack_require__(236);
 
 var _home2 = _interopRequireDefault(_home);
 
@@ -27275,7 +27279,7 @@ exports.default = _react2.default.createElement(
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+	value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -27298,14 +27302,653 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 /* FivestarHeader Component initialization */
 var Header = function (_React$Component) {
-  _inherits(Header, _React$Component);
+	_inherits(Header, _React$Component);
+
+	/* Initializing objects of its FivestarHeader class */
+	function Header(props) {
+		_classCallCheck(this, Header);
+
+		/* FivestarHeader Component State variables Initialization */
+		var _this = _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).call(this, props));
+
+		_this.state = {
+			activeIndex: 0
+		};
+
+		return _this;
+	}
+
+	_createClass(Header, [{
+		key: 'componentDidMount',
+		value: function componentDidMount() {}
+	}, {
+		key: 'render',
+		value: function render() {
+			return _react2.default.createElement(
+				'div',
+				null,
+				_react2.default.createElement(
+					'div',
+					{ id: 'navbar', className: 'navbar navbar-default ace-save-state' },
+					_react2.default.createElement(
+						'div',
+						{ className: 'navbar-container ace-save-state', id: 'navbar-container' },
+						_react2.default.createElement(
+							'button',
+							{ type: 'button', className: 'navbar-toggle menu-toggler pull-left', id: 'menu-toggler', 'data-target': '#sidebar' },
+							_react2.default.createElement(
+								'span',
+								{ className: 'sr-only' },
+								'Toggle sidebar'
+							),
+							_react2.default.createElement('span', { className: 'icon-bar' }),
+							_react2.default.createElement('span', { className: 'icon-bar' }),
+							_react2.default.createElement('span', { className: 'icon-bar' })
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'navbar-header pull-left' },
+							_react2.default.createElement(
+								'a',
+								{ href: 'index.html', className: 'navbar-brand' },
+								_react2.default.createElement(
+									'small',
+									null,
+									_react2.default.createElement('img', { src: 'assets/images/logo/yencash-white.png' })
+								)
+							)
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'navbar-buttons navbar-header pull-right', role: 'navigation' },
+							_react2.default.createElement(
+								'ul',
+								{ className: 'nav ace-nav' },
+								_react2.default.createElement(
+									'li',
+									{ className: 'grey dropdown-modal' },
+									_react2.default.createElement(
+										'a',
+										{ 'data-toggle': 'dropdown', className: 'dropdown-toggle', href: '#' },
+										_react2.default.createElement('i', { className: 'ace-icon fa fa-tasks' }),
+										_react2.default.createElement(
+											'span',
+											{ className: 'badge badge-grey' },
+											'4'
+										)
+									),
+									_react2.default.createElement(
+										'ul',
+										{ className: 'dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close' },
+										_react2.default.createElement(
+											'li',
+											{ className: 'dropdown-header' },
+											_react2.default.createElement('i', { className: 'ace-icon fa fa-check' }),
+											'4 Tasks to complete'
+										),
+										_react2.default.createElement(
+											'li',
+											{ className: 'dropdown-content' },
+											_react2.default.createElement(
+												'ul',
+												{ className: 'dropdown-menu dropdown-navbar' },
+												_react2.default.createElement(
+													'li',
+													null,
+													_react2.default.createElement(
+														'a',
+														{ href: '#' },
+														_react2.default.createElement(
+															'div',
+															{ className: 'clearfix' },
+															_react2.default.createElement(
+																'span',
+																{ className: 'pull-left' },
+																'Software Update'
+															),
+															_react2.default.createElement(
+																'span',
+																{ className: 'pull-right' },
+																'65%'
+															)
+														),
+														_react2.default.createElement(
+															'div',
+															{ className: 'progress progress-mini' },
+															_react2.default.createElement('div', { style: { width: '65%' }, className: 'progress-bar' })
+														)
+													)
+												),
+												_react2.default.createElement(
+													'li',
+													null,
+													_react2.default.createElement(
+														'a',
+														{ href: '#' },
+														_react2.default.createElement(
+															'div',
+															{ className: 'clearfix' },
+															_react2.default.createElement(
+																'span',
+																{ className: 'pull-left' },
+																'Hardware Upgrade'
+															),
+															_react2.default.createElement(
+																'span',
+																{ className: 'pull-right' },
+																'35%'
+															)
+														),
+														_react2.default.createElement(
+															'div',
+															{ className: 'progress progress-mini' },
+															_react2.default.createElement('div', { style: { width: '35%' }, className: 'progress-bar progress-bar-danger' })
+														)
+													)
+												),
+												_react2.default.createElement(
+													'li',
+													null,
+													_react2.default.createElement(
+														'a',
+														{ href: '#' },
+														_react2.default.createElement(
+															'div',
+															{ className: 'clearfix' },
+															_react2.default.createElement(
+																'span',
+																{ className: 'pull-left' },
+																'Unit Testing'
+															),
+															_react2.default.createElement(
+																'span',
+																{ className: 'pull-right' },
+																'15%'
+															)
+														),
+														_react2.default.createElement(
+															'div',
+															{ className: 'progress progress-mini' },
+															_react2.default.createElement('div', { style: { width: '15%' }, className: 'progress-bar progress-bar-warning' })
+														)
+													)
+												),
+												_react2.default.createElement(
+													'li',
+													null,
+													_react2.default.createElement(
+														'a',
+														{ href: '#' },
+														_react2.default.createElement(
+															'div',
+															{ className: 'clearfix' },
+															_react2.default.createElement(
+																'span',
+																{ className: 'pull-left' },
+																'Bug Fixes'
+															),
+															_react2.default.createElement(
+																'span',
+																{ className: 'pull-right' },
+																'90%'
+															)
+														),
+														_react2.default.createElement(
+															'div',
+															{ className: 'progress progress-mini progress-striped active' },
+															_react2.default.createElement('div', { style: { width: '90%' }, className: 'progress-bar progress-bar-success' })
+														)
+													)
+												)
+											)
+										),
+										_react2.default.createElement(
+											'li',
+											{ className: 'dropdown-footer' },
+											_react2.default.createElement(
+												'a',
+												{ href: '#' },
+												'See tasks with details',
+												_react2.default.createElement('i', { className: 'ace-icon fa fa-arrow-right' })
+											)
+										)
+									)
+								),
+								_react2.default.createElement(
+									'li',
+									{ className: 'purple dropdown-modal' },
+									_react2.default.createElement(
+										'a',
+										{ 'data-toggle': 'dropdown', className: 'dropdown-toggle', href: '#' },
+										_react2.default.createElement('i', { className: 'ace-icon fa fa-bell icon-animated-bell' }),
+										_react2.default.createElement(
+											'span',
+											{ className: 'badge badge-important' },
+											'8'
+										)
+									),
+									_react2.default.createElement(
+										'ul',
+										{ className: 'dropdown-menu-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-close' },
+										_react2.default.createElement(
+											'li',
+											{ className: 'dropdown-header' },
+											_react2.default.createElement('i', { className: 'ace-icon fa fa-exclamation-triangle' }),
+											'8 Notifications'
+										),
+										_react2.default.createElement(
+											'li',
+											{ className: 'dropdown-content' },
+											_react2.default.createElement(
+												'ul',
+												{ className: 'dropdown-menu dropdown-navbar navbar-pink' },
+												_react2.default.createElement(
+													'li',
+													null,
+													_react2.default.createElement(
+														'a',
+														{ href: '#' },
+														_react2.default.createElement(
+															'div',
+															{ className: 'clearfix' },
+															_react2.default.createElement(
+																'span',
+																{ className: 'pull-left' },
+																_react2.default.createElement('i', { className: 'btn btn-xs no-hover btn-pink fa fa-comment' }),
+																'New Comments'
+															),
+															_react2.default.createElement(
+																'span',
+																{ className: 'pull-right badge badge-info' },
+																'+12'
+															)
+														)
+													)
+												),
+												_react2.default.createElement(
+													'li',
+													null,
+													_react2.default.createElement(
+														'a',
+														{ href: '#' },
+														_react2.default.createElement('i', { className: 'btn btn-xs btn-primary fa fa-user' }),
+														'Bob just signed up as an editor ...'
+													)
+												),
+												_react2.default.createElement(
+													'li',
+													null,
+													_react2.default.createElement(
+														'a',
+														{ href: '#' },
+														_react2.default.createElement(
+															'div',
+															{ className: 'clearfix' },
+															_react2.default.createElement(
+																'span',
+																{ className: 'pull-left' },
+																_react2.default.createElement('i', { className: 'btn btn-xs no-hover btn-success fa fa-shopping-cart' }),
+																'New Orders'
+															),
+															_react2.default.createElement(
+																'span',
+																{ className: 'pull-right badge badge-success' },
+																'+8'
+															)
+														)
+													)
+												),
+												_react2.default.createElement(
+													'li',
+													null,
+													_react2.default.createElement(
+														'a',
+														{ href: '#' },
+														_react2.default.createElement(
+															'div',
+															{ className: 'clearfix' },
+															_react2.default.createElement(
+																'span',
+																{ className: 'pull-left' },
+																_react2.default.createElement('i', { className: 'btn btn-xs no-hover btn-info fa fa-twitter' }),
+																'Followers'
+															),
+															_react2.default.createElement(
+																'span',
+																{ className: 'pull-right badge badge-info' },
+																'+11'
+															)
+														)
+													)
+												)
+											)
+										),
+										_react2.default.createElement(
+											'li',
+											{ className: 'dropdown-footer' },
+											_react2.default.createElement(
+												'a',
+												{ href: '#' },
+												'See all notifications',
+												_react2.default.createElement('i', { className: 'ace-icon fa fa-arrow-right' })
+											)
+										)
+									)
+								),
+								_react2.default.createElement(
+									'li',
+									{ className: 'green dropdown-modal' },
+									_react2.default.createElement(
+										'a',
+										{ 'data-toggle': 'dropdown', className: 'dropdown-toggle', href: '#' },
+										_react2.default.createElement('i', { className: 'ace-icon fa fa-envelope icon-animated-vertical' }),
+										_react2.default.createElement(
+											'span',
+											{ className: 'badge badge-success' },
+											'5'
+										)
+									),
+									_react2.default.createElement(
+										'ul',
+										{ className: 'dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close' },
+										_react2.default.createElement(
+											'li',
+											{ className: 'dropdown-header' },
+											_react2.default.createElement('i', { className: 'ace-icon fa fa-envelope-o' }),
+											'5 Messages'
+										),
+										_react2.default.createElement(
+											'li',
+											{ className: 'dropdown-content' },
+											_react2.default.createElement(
+												'ul',
+												{ className: 'dropdown-menu dropdown-navbar' },
+												_react2.default.createElement(
+													'li',
+													null,
+													_react2.default.createElement(
+														'a',
+														{ href: '#', className: 'clearfix' },
+														_react2.default.createElement('img', { src: 'assets/images/avatars/avatar.png', className: 'msg-photo', alt: 'Alex\'s Avatar' }),
+														_react2.default.createElement(
+															'span',
+															{ className: 'msg-body' },
+															_react2.default.createElement(
+																'span',
+																{ className: 'msg-title' },
+																_react2.default.createElement(
+																	'span',
+																	{ className: 'blue' },
+																	'Alex:'
+																),
+																'Ciao sociis natoque penatibus et auctor ...'
+															),
+															_react2.default.createElement(
+																'span',
+																{ className: 'msg-time' },
+																_react2.default.createElement('i', { className: 'ace-icon fa fa-clock-o' }),
+																_react2.default.createElement(
+																	'span',
+																	null,
+																	'a moment ago'
+																)
+															)
+														)
+													)
+												),
+												_react2.default.createElement(
+													'li',
+													null,
+													_react2.default.createElement(
+														'a',
+														{ href: '#', className: 'clearfix' },
+														_react2.default.createElement('img', { src: 'assets/images/avatars/avatar3.png', className: 'msg-photo', alt: 'Susan\'s Avatar' }),
+														_react2.default.createElement(
+															'span',
+															{ className: 'msg-body' },
+															_react2.default.createElement(
+																'span',
+																{ className: 'msg-title' },
+																_react2.default.createElement(
+																	'span',
+																	{ className: 'blue' },
+																	'Susan:'
+																),
+																'Vestibulum id ligula porta felis euismod ...'
+															),
+															_react2.default.createElement(
+																'span',
+																{ className: 'msg-time' },
+																_react2.default.createElement('i', { className: 'ace-icon fa fa-clock-o' }),
+																_react2.default.createElement(
+																	'span',
+																	null,
+																	'20 minutes ago'
+																)
+															)
+														)
+													)
+												),
+												_react2.default.createElement(
+													'li',
+													null,
+													_react2.default.createElement(
+														'a',
+														{ href: '#', className: 'clearfix' },
+														_react2.default.createElement('img', { src: 'assets/images/avatars/avatar4.png', className: 'msg-photo', alt: 'Bob\'s Avatar' }),
+														_react2.default.createElement(
+															'span',
+															{ className: 'msg-body' },
+															_react2.default.createElement(
+																'span',
+																{ className: 'msg-title' },
+																_react2.default.createElement(
+																	'span',
+																	{ className: 'blue' },
+																	'Bob:'
+																),
+																'Nullam quis risus eget urna mollis ornare ...'
+															),
+															_react2.default.createElement(
+																'span',
+																{ className: 'msg-time' },
+																_react2.default.createElement('i', { className: 'ace-icon fa fa-clock-o' }),
+																_react2.default.createElement(
+																	'span',
+																	null,
+																	'3:15 pm'
+																)
+															)
+														)
+													)
+												),
+												_react2.default.createElement(
+													'li',
+													null,
+													_react2.default.createElement(
+														'a',
+														{ href: '#', className: 'clearfix' },
+														_react2.default.createElement('img', { src: 'assets/images/avatars/avatar2.png', className: 'msg-photo', alt: 'Kate\'s Avatar' }),
+														_react2.default.createElement(
+															'span',
+															{ className: 'msg-body' },
+															_react2.default.createElement(
+																'span',
+																{ className: 'msg-title' },
+																_react2.default.createElement(
+																	'span',
+																	{ className: 'blue' },
+																	'Kate:'
+																),
+																'Ciao sociis natoque eget urna mollis ornare ...'
+															),
+															_react2.default.createElement(
+																'span',
+																{ className: 'msg-time' },
+																_react2.default.createElement('i', { className: 'ace-icon fa fa-clock-o' }),
+																_react2.default.createElement(
+																	'span',
+																	null,
+																	'1:33 pm'
+																)
+															)
+														)
+													)
+												),
+												_react2.default.createElement(
+													'li',
+													null,
+													_react2.default.createElement(
+														'a',
+														{ href: '#', className: 'clearfix' },
+														_react2.default.createElement('img', { src: 'assets/images/avatars/avatar5.png', className: 'msg-photo', alt: 'Fred\'s Avatar' }),
+														_react2.default.createElement(
+															'span',
+															{ className: 'msg-body' },
+															_react2.default.createElement(
+																'span',
+																{ className: 'msg-title' },
+																_react2.default.createElement(
+																	'span',
+																	{ className: 'blue' },
+																	'Fred:'
+																),
+																'Vestibulum id penatibus et auctor  ...'
+															),
+															_react2.default.createElement(
+																'span',
+																{ className: 'msg-time' },
+																_react2.default.createElement('i', { className: 'ace-icon fa fa-clock-o' }),
+																_react2.default.createElement(
+																	'span',
+																	null,
+																	'10:09 am'
+																)
+															)
+														)
+													)
+												)
+											)
+										),
+										_react2.default.createElement(
+											'li',
+											{ className: 'dropdown-footer' },
+											_react2.default.createElement(
+												'a',
+												{ href: 'inbox.html' },
+												'See all messages',
+												_react2.default.createElement('i', { className: 'ace-icon fa fa-arrow-right' })
+											)
+										)
+									)
+								),
+								_react2.default.createElement(
+									'li',
+									{ className: 'light-blue dropdown-modal' },
+									_react2.default.createElement(
+										'a',
+										{ 'data-toggle': 'dropdown', href: '#', className: 'dropdown-toggle' },
+										_react2.default.createElement('img', { className: 'nav-user-photo', src: 'assets/images/avatars/user.jpg', alt: 'Jason\'s Photo' }),
+										_react2.default.createElement(
+											'span',
+											{ className: 'user-info' },
+											_react2.default.createElement(
+												'small',
+												null,
+												'Welcome,'
+											),
+											'Jason'
+										),
+										_react2.default.createElement('i', { className: 'ace-icon fa fa-caret-down' })
+									),
+									_react2.default.createElement(
+										'ul',
+										{ className: 'user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close' },
+										_react2.default.createElement(
+											'li',
+											null,
+											_react2.default.createElement(
+												'a',
+												{ href: '#' },
+												_react2.default.createElement('i', { className: 'ace-icon fa fa-cog' }),
+												'Settings'
+											)
+										),
+										_react2.default.createElement(
+											'li',
+											null,
+											_react2.default.createElement(
+												'a',
+												{ href: 'profile.html' },
+												_react2.default.createElement('i', { className: 'ace-icon fa fa-user' }),
+												'Profile'
+											)
+										),
+										_react2.default.createElement('li', { className: 'divider' }),
+										_react2.default.createElement(
+											'li',
+											null,
+											_react2.default.createElement(
+												'a',
+												{ href: '#' },
+												_react2.default.createElement('i', { className: 'ace-icon fa fa-power-off' }),
+												'Logout'
+											)
+										)
+									)
+								)
+							)
+						)
+					)
+				)
+			);
+		}
+	}]);
+
+	return Header;
+}(_react2.default.Component);
+
+exports.default = Header;
+
+/***/ }),
+/* 234 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(6);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(30);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /* Importing the node modules, child components, services and controllers used 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  inside FivestarHeader component */
+
+
+/* FivestarHeader Component initialization */
+var Footer = function (_React$Component) {
+  _inherits(Footer, _React$Component);
 
   /* Initializing objects of its FivestarHeader class */
-  function Header(props) {
-    _classCallCheck(this, Header);
+  function Footer(props) {
+    _classCallCheck(this, Footer);
 
     /* FivestarHeader Component State variables Initialization */
-    var _this = _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).call(this, props));
 
     _this.state = {
       activeIndex: 0
@@ -27314,7 +27957,7 @@ var Header = function (_React$Component) {
     return _this;
   }
 
-  _createClass(Header, [{
+  _createClass(Footer, [{
     key: 'componentDidMount',
     value: function componentDidMount() {}
   }, {
@@ -27324,93 +27967,400 @@ var Header = function (_React$Component) {
         'div',
         null,
         _react2.default.createElement(
-          'nav',
-          { className: 'navbar navbar-default navbar-fixed-top' },
+          'div',
+          { className: 'footer' },
           _react2.default.createElement(
             'div',
-            { className: 'container' },
+            { className: 'footer-inner' },
             _react2.default.createElement(
               'div',
-              { className: 'navbar-header' },
+              { className: 'footer-content' },
               _react2.default.createElement(
-                'button',
-                { type: 'button', className: 'navbar-toggle', 'data-toggle': 'collapse', 'data-target': '#myNavbar' },
-                _react2.default.createElement('span', { className: 'icon-bar' }),
-                _react2.default.createElement('span', { className: 'icon-bar' }),
-                _react2.default.createElement('span', { className: 'icon-bar' })
+                'span',
+                { className: 'bigger-120' },
+                _react2.default.createElement(
+                  'span',
+                  { className: 'blue bolder' },
+                  'Mactosoft'
+                ),
+                '\xA9 2013-2014'
               ),
+              '\xA0 \xA0',
               _react2.default.createElement(
-                'a',
-                { className: 'navbar-brand', href: '#myPage' },
-                'Logo'
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'collapse navbar-collapse', id: 'myNavbar' },
-              _react2.default.createElement(
-                'ul',
-                { className: 'nav navbar-nav navbar-right' },
+                'span',
+                { className: 'action-buttons' },
                 _react2.default.createElement(
-                  'li',
-                  null,
-                  _react2.default.createElement(
-                    'a',
-                    { href: '#about' },
-                    'ABOUT'
-                  )
+                  'a',
+                  { href: '#' },
+                  _react2.default.createElement('i', { className: 'ace-icon fa fa-twitter-square light-blue bigger-150' })
                 ),
                 _react2.default.createElement(
-                  'li',
-                  null,
-                  _react2.default.createElement(
-                    'a',
-                    { href: '#services' },
-                    'SERVICES'
-                  )
+                  'a',
+                  { href: '#' },
+                  _react2.default.createElement('i', { className: 'ace-icon fa fa-facebook-square text-primary bigger-150' })
                 ),
                 _react2.default.createElement(
-                  'li',
-                  null,
-                  _react2.default.createElement(
-                    'a',
-                    { href: '#portfolio' },
-                    'PORTFOLIO'
-                  )
-                ),
-                _react2.default.createElement(
-                  'li',
-                  null,
-                  _react2.default.createElement(
-                    'a',
-                    { href: '#pricing' },
-                    'PRICING'
-                  )
-                ),
-                _react2.default.createElement(
-                  'li',
-                  null,
-                  _react2.default.createElement(
-                    'a',
-                    { href: '#contact' },
-                    'CONTACT'
-                  )
+                  'a',
+                  { href: '#' },
+                  _react2.default.createElement('i', { className: 'ace-icon fa fa-rss-square orange bigger-150' })
                 )
               )
             )
           )
+        ),
+        _react2.default.createElement(
+          'a',
+          { href: '#', id: 'btn-scroll-up', className: 'btn-scroll-up btn btn-sm btn-inverse' },
+          _react2.default.createElement('i', { className: 'ace-icon fa fa-angle-double-up icon-only bigger-110' })
         )
       );
     }
   }]);
 
-  return Header;
+  return Footer;
 }(_react2.default.Component);
 
-exports.default = Header;
+exports.default = Footer;
 
 /***/ }),
-/* 234 */
+/* 235 */,
+/* 236 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(6);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(30);
+
+var _navBar = __webpack_require__(237);
+
+var _navBar2 = _interopRequireDefault(_navBar);
+
+var _settings = __webpack_require__(238);
+
+var _settings2 = _interopRequireDefault(_settings);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /* Importing the node modules, child components, services and controllers used 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  inside FivestarHeader component */
+
+
+/* FivestarHeader Component initialization */
+var Home = function (_React$Component) {
+	_inherits(Home, _React$Component);
+
+	/* Initializing objects of its FivestarHeader class */
+	function Home(props) {
+		_classCallCheck(this, Home);
+
+		/* FivestarHeader Component State variables Initialization */
+		var _this = _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).call(this, props));
+
+		_this.state = {
+			activeIndex: 0
+		};
+
+		return _this;
+	}
+
+	_createClass(Home, [{
+		key: 'componentDidMount',
+		value: function componentDidMount() {}
+	}, {
+		key: 'render',
+		value: function render() {
+			return _react2.default.createElement(
+				'div',
+				null,
+				_react2.default.createElement(
+					'div',
+					{ className: 'main-container ace-save-state', id: 'main-container' },
+					_react2.default.createElement(
+						'script',
+						{ type: 'text/javascript' },
+						'try',
+						ace.settings.loadState('main-container'),
+						'catch(e)'
+					),
+					_react2.default.createElement(_navBar2.default, null),
+					_react2.default.createElement(
+						'div',
+						{ className: 'main-content' },
+						_react2.default.createElement(
+							'div',
+							{ className: 'main-content-inner' },
+							_react2.default.createElement(
+								'div',
+								{ className: 'breadcrumbs ace-save-state', id: 'breadcrumbs' },
+								_react2.default.createElement(
+									'ul',
+									{ className: 'breadcrumb' },
+									_react2.default.createElement(
+										'li',
+										null,
+										_react2.default.createElement('i', { className: 'ace-icon fa fa-home home-icon' }),
+										_react2.default.createElement(
+											'a',
+											{ href: '#' },
+											'Home'
+										)
+									),
+									_react2.default.createElement(
+										'li',
+										null,
+										_react2.default.createElement(
+											'a',
+											{ href: 'quiz-dashboard.html' },
+											'Quiz'
+										)
+									),
+									_react2.default.createElement(
+										'li',
+										{ className: 'active' },
+										'Add Questions'
+									)
+								),
+								_react2.default.createElement(
+									'div',
+									{ className: 'nav-search', id: 'nav-search' },
+									_react2.default.createElement(
+										'form',
+										{ className: 'form-search' },
+										_react2.default.createElement(
+											'span',
+											{ className: 'input-icon' },
+											_react2.default.createElement('input', { type: 'text', placeholder: 'Search ...', className: 'nav-search-input', id: 'nav-search-input', autoComplete: 'off' }),
+											_react2.default.createElement('i', { className: 'ace-icon fa fa-search nav-search-icon' })
+										)
+									)
+								)
+							),
+							_react2.default.createElement(
+								'div',
+								{ className: 'page-content' },
+								_react2.default.createElement(_settings2.default, null),
+								_react2.default.createElement(
+									'div',
+									{ className: 'row' },
+									_react2.default.createElement(
+										'div',
+										{ className: 'col-xs-12' },
+										_react2.default.createElement(
+											'h3',
+											{ className: 'header smaller lighter blue' },
+											'Add Questions'
+										),
+										_react2.default.createElement(
+											'form',
+											{ className: 'form-horizontal', role: 'form' },
+											_react2.default.createElement(
+												'div',
+												{ className: 'form-group' },
+												_react2.default.createElement(
+													'label',
+													{ className: 'col-sm-3 control-label no-padding-right', htmlFor: 'form-field-1' },
+													' Question'
+												),
+												_react2.default.createElement(
+													'div',
+													{ className: 'col-sm-9' },
+													_react2.default.createElement('textarea', { className: 'col-xs-10 col-sm-8', id: 'form-field-1', placeholder: 'Default Text' })
+												)
+											),
+											_react2.default.createElement(
+												'div',
+												{ className: 'form-group' },
+												_react2.default.createElement(
+													'label',
+													{ className: 'col-sm-3 control-label no-padding-right', htmlFor: 'form-field-1' },
+													' Option A '
+												),
+												_react2.default.createElement(
+													'div',
+													{ className: 'col-sm-9' },
+													_react2.default.createElement('input', { type: 'text', id: 'form-field-1', placeholder: 'Answer A', className: 'col-xs-12 col-sm-3' })
+												)
+											),
+											_react2.default.createElement(
+												'div',
+												{ className: 'form-group' },
+												_react2.default.createElement(
+													'label',
+													{ className: 'col-sm-3 control-label no-padding-right', htmlFor: 'form-field-1' },
+													' Option B '
+												),
+												_react2.default.createElement(
+													'div',
+													{ className: 'col-sm-9' },
+													_react2.default.createElement('input', { type: 'text', id: 'form-field-1', placeholder: 'Answer A', className: 'col-xs-12 col-sm-3' })
+												)
+											),
+											_react2.default.createElement(
+												'div',
+												{ className: 'form-group' },
+												_react2.default.createElement(
+													'label',
+													{ className: 'col-sm-3 control-label no-padding-right', htmlFor: 'form-field-1' },
+													' Option C '
+												),
+												_react2.default.createElement(
+													'div',
+													{ className: 'col-sm-9' },
+													_react2.default.createElement('input', { type: 'text', id: 'form-field-1', placeholder: 'Answer A', className: 'col-xs-12 col-sm-3' })
+												)
+											),
+											_react2.default.createElement(
+												'div',
+												{ className: 'form-group' },
+												_react2.default.createElement(
+													'label',
+													{ className: 'col-sm-3 control-label no-padding-right', htmlFor: 'form-field-1' },
+													' Option D '
+												),
+												_react2.default.createElement(
+													'div',
+													{ className: 'col-sm-9' },
+													_react2.default.createElement('input', { type: 'text', id: 'form-field-1', placeholder: 'Answer A', className: 'col-xs-12 col-sm-3' })
+												)
+											),
+											_react2.default.createElement(
+												'div',
+												{ className: 'form-group' },
+												_react2.default.createElement(
+													'label',
+													{ className: 'col-sm-3 control-label no-padding-right', htmlFor: 'form-field-1' },
+													' Right Answer '
+												),
+												_react2.default.createElement(
+													'div',
+													{ className: 'col-sm-9' },
+													_react2.default.createElement(
+														'select',
+														{ className: 'col-xs-12 col-sm-3', id: 'form-field-select-1' },
+														_react2.default.createElement(
+															'option',
+															{ value: '' },
+															'Select Right Answer'
+														),
+														_react2.default.createElement(
+															'option',
+															{ value: 'AL' },
+															'A'
+														),
+														_react2.default.createElement(
+															'option',
+															{ value: 'AK' },
+															'B'
+														),
+														_react2.default.createElement(
+															'option',
+															{ value: 'AZ' },
+															'C'
+														),
+														_react2.default.createElement(
+															'option',
+															{ value: 'AZ' },
+															'D'
+														)
+													)
+												)
+											),
+											_react2.default.createElement(
+												'div',
+												{ className: 'form-group' },
+												_react2.default.createElement(
+													'label',
+													{ className: 'col-sm-3 control-label no-padding-right', htmlFor: 'form-field-1' },
+													' Subject '
+												),
+												_react2.default.createElement(
+													'div',
+													{ className: 'col-sm-9' },
+													_react2.default.createElement(
+														'select',
+														{ className: 'col-xs-12 col-sm-3', id: 'form-field-select-1' },
+														_react2.default.createElement(
+															'option',
+															{ value: '' },
+															'Select Right Answer'
+														),
+														_react2.default.createElement(
+															'option',
+															{ value: 'AL' },
+															'A'
+														),
+														_react2.default.createElement(
+															'option',
+															{ value: 'AK' },
+															'B'
+														),
+														_react2.default.createElement(
+															'option',
+															{ value: 'AZ' },
+															'C'
+														),
+														_react2.default.createElement(
+															'option',
+															{ value: 'AZ' },
+															'D'
+														)
+													)
+												)
+											),
+											_react2.default.createElement(
+												'div',
+												{ className: 'clearfix form-actions' },
+												_react2.default.createElement(
+													'div',
+													{ className: 'col-md-offset-3 col-md-9' },
+													_react2.default.createElement(
+														'button',
+														{ className: 'btn btn-info', type: 'button' },
+														_react2.default.createElement('i', { className: 'ace-icon fa fa-check bigger-110' }),
+														'Submit'
+													),
+													'\xA0 \xA0 \xA0',
+													_react2.default.createElement(
+														'button',
+														{ className: 'btn', type: 'reset' },
+														_react2.default.createElement('i', { className: 'ace-icon fa fa-undo bigger-110' }),
+														'Reset'
+													)
+												)
+											)
+										)
+									)
+								)
+							)
+						)
+					)
+				)
+			);
+		}
+	}]);
+
+	return Home;
+}(_react2.default.Component);
+
+exports.default = Home;
+
+/***/ }),
+/* 237 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27439,15 +28389,15 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 /* FivestarHeader Component initialization */
-var Footer = function (_React$Component) {
-    _inherits(Footer, _React$Component);
+var Navbar = function (_React$Component) {
+    _inherits(Navbar, _React$Component);
 
     /* Initializing objects of its FivestarHeader class */
-    function Footer(props) {
-        _classCallCheck(this, Footer);
+    function Navbar(props) {
+        _classCallCheck(this, Navbar);
 
         /* FivestarHeader Component State variables Initialization */
-        var _this = _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).call(this, props));
+        var _this = _possibleConstructorReturn(this, (Navbar.__proto__ || Object.getPrototypeOf(Navbar)).call(this, props));
 
         _this.state = {
             activeIndex: 0
@@ -27456,7 +28406,7 @@ var Footer = function (_React$Component) {
         return _this;
     }
 
-    _createClass(Footer, [{
+    _createClass(Navbar, [{
         key: 'componentDidMount',
         value: function componentDidMount() {}
     }, {
@@ -27464,26 +28414,742 @@ var Footer = function (_React$Component) {
         value: function render() {
             return _react2.default.createElement(
                 'div',
-                null,
-                'Footer'
+                { id: 'sidebar', className: 'sidebar responsive ace-save-state' },
+                _react2.default.createElement(
+                    'script',
+                    { type: 'text/javascript' },
+                    'try',
+                    ace.settings.loadState('sidebar'),
+                    'catch(e)'
+                ),
+                _react2.default.createElement(
+                    'div',
+                    { className: 'sidebar-shortcuts', id: 'sidebar-shortcuts' },
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'sidebar-shortcuts-large', id: 'sidebar-shortcuts-large' },
+                        _react2.default.createElement(
+                            'button',
+                            { className: 'btn btn-success' },
+                            _react2.default.createElement('i', { className: 'ace-icon fa fa-signal' })
+                        ),
+                        _react2.default.createElement(
+                            'button',
+                            { className: 'btn btn-info' },
+                            _react2.default.createElement('i', { className: 'ace-icon fa fa-pencil' })
+                        ),
+                        _react2.default.createElement(
+                            'button',
+                            { className: 'btn btn-warning' },
+                            _react2.default.createElement('i', { className: 'ace-icon fa fa-users' })
+                        ),
+                        _react2.default.createElement(
+                            'button',
+                            { className: 'btn btn-danger' },
+                            _react2.default.createElement('i', { className: 'ace-icon fa fa-cogs' })
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'sidebar-shortcuts-mini', id: 'sidebar-shortcuts-mini' },
+                        _react2.default.createElement('span', { className: 'btn btn-success' }),
+                        _react2.default.createElement('span', { className: 'btn btn-info' }),
+                        _react2.default.createElement('span', { className: 'btn btn-warning' }),
+                        _react2.default.createElement('span', { className: 'btn btn-danger' })
+                    )
+                ),
+                _react2.default.createElement(
+                    'ul',
+                    { className: 'nav nav-list' },
+                    _react2.default.createElement(
+                        'li',
+                        { className: 'Dashboard' },
+                        _react2.default.createElement(
+                            'a',
+                            { href: 'dashboard.html' },
+                            _react2.default.createElement('i', { className: 'menu-icon fa fa-tachometer' }),
+                            _react2.default.createElement(
+                                'span',
+                                { className: 'menu-text' },
+                                ' Dashboard '
+                            )
+                        ),
+                        _react2.default.createElement('b', { className: 'arrow' })
+                    ),
+                    _react2.default.createElement(
+                        'li',
+                        { className: 'Lottery' },
+                        _react2.default.createElement(
+                            'a',
+                            { href: 'lottery.html', className: 'dropdown-toggle' },
+                            _react2.default.createElement('i', { className: 'menu-icon fa fa-desktop' }),
+                            _react2.default.createElement(
+                                'span',
+                                { className: 'menu-text' },
+                                'Lottery'
+                            ),
+                            _react2.default.createElement('b', { className: 'arrow fa fa-angle-down' })
+                        ),
+                        _react2.default.createElement('b', { className: 'arrow' }),
+                        _react2.default.createElement(
+                            'ul',
+                            { className: 'submenu' },
+                            _react2.default.createElement(
+                                'li',
+                                { className: '' },
+                                _react2.default.createElement(
+                                    'a',
+                                    { href: '#', className: 'dropdown-toggle' },
+                                    _react2.default.createElement('i', { className: 'menu-icon fa fa-caret-right' }),
+                                    'Layouts',
+                                    _react2.default.createElement('b', { className: 'arrow fa fa-angle-down' })
+                                ),
+                                _react2.default.createElement('b', { className: 'arrow' }),
+                                _react2.default.createElement(
+                                    'ul',
+                                    { className: 'submenu' },
+                                    _react2.default.createElement(
+                                        'li',
+                                        { className: '' },
+                                        _react2.default.createElement(
+                                            'a',
+                                            { href: 'top-menu.html' },
+                                            _react2.default.createElement('i', { className: 'menu-icon fa fa-caret-right' }),
+                                            'Top Menu'
+                                        ),
+                                        _react2.default.createElement('b', { className: 'arrow' })
+                                    ),
+                                    _react2.default.createElement(
+                                        'li',
+                                        { className: '' },
+                                        _react2.default.createElement(
+                                            'a',
+                                            { href: 'two-menu-1.html' },
+                                            _react2.default.createElement('i', { className: 'menu-icon fa fa-caret-right' }),
+                                            'Two Menus 1'
+                                        ),
+                                        _react2.default.createElement('b', { className: 'arrow' })
+                                    ),
+                                    _react2.default.createElement(
+                                        'li',
+                                        { className: '' },
+                                        _react2.default.createElement(
+                                            'a',
+                                            { href: 'two-menu-2.html' },
+                                            _react2.default.createElement('i', { className: 'menu-icon fa fa-caret-right' }),
+                                            'Two Menus 2'
+                                        ),
+                                        _react2.default.createElement('b', { className: 'arrow' })
+                                    ),
+                                    _react2.default.createElement(
+                                        'li',
+                                        { className: '' },
+                                        _react2.default.createElement(
+                                            'a',
+                                            { href: 'mobile-menu-1.html' },
+                                            _react2.default.createElement('i', { className: 'menu-icon fa fa-caret-right' }),
+                                            'Default Mobile Menu'
+                                        ),
+                                        _react2.default.createElement('b', { className: 'arrow' })
+                                    ),
+                                    _react2.default.createElement(
+                                        'li',
+                                        { className: '' },
+                                        _react2.default.createElement(
+                                            'a',
+                                            { href: 'mobile-menu-2.html' },
+                                            _react2.default.createElement('i', { className: 'menu-icon fa fa-caret-right' }),
+                                            'Mobile Menu 2'
+                                        ),
+                                        _react2.default.createElement('b', { className: 'arrow' })
+                                    ),
+                                    _react2.default.createElement(
+                                        'li',
+                                        { className: '' },
+                                        _react2.default.createElement(
+                                            'a',
+                                            { href: 'mobile-menu-3.html' },
+                                            _react2.default.createElement('i', { className: 'menu-icon fa fa-caret-right' }),
+                                            'Mobile Menu 3'
+                                        ),
+                                        _react2.default.createElement('b', { className: 'arrow' })
+                                    )
+                                )
+                            ),
+                            _react2.default.createElement(
+                                'li',
+                                { className: '' },
+                                _react2.default.createElement(
+                                    'a',
+                                    { href: 'typography.html' },
+                                    _react2.default.createElement('i', { className: 'menu-icon fa fa-caret-right' }),
+                                    'Typography'
+                                ),
+                                _react2.default.createElement('b', { className: 'arrow' })
+                            ),
+                            _react2.default.createElement(
+                                'li',
+                                { className: '' },
+                                _react2.default.createElement(
+                                    'a',
+                                    { href: 'elements.html' },
+                                    _react2.default.createElement('i', { className: 'menu-icon fa fa-caret-right' }),
+                                    'Elements'
+                                ),
+                                _react2.default.createElement('b', { className: 'arrow' })
+                            ),
+                            _react2.default.createElement(
+                                'li',
+                                { className: '' },
+                                _react2.default.createElement(
+                                    'a',
+                                    { href: 'buttons.html' },
+                                    _react2.default.createElement('i', { className: 'menu-icon fa fa-caret-right' }),
+                                    'Buttons & Icons'
+                                ),
+                                _react2.default.createElement('b', { className: 'arrow' })
+                            ),
+                            _react2.default.createElement(
+                                'li',
+                                { className: '' },
+                                _react2.default.createElement(
+                                    'a',
+                                    { href: 'content-slider.html' },
+                                    _react2.default.createElement('i', { className: 'menu-icon fa fa-caret-right' }),
+                                    'Content Sliders'
+                                ),
+                                _react2.default.createElement('b', { className: 'arrow' })
+                            ),
+                            _react2.default.createElement(
+                                'li',
+                                { className: '' },
+                                _react2.default.createElement(
+                                    'a',
+                                    { href: 'treeview.html' },
+                                    _react2.default.createElement('i', { className: 'menu-icon fa fa-caret-right' }),
+                                    'Treeview'
+                                ),
+                                _react2.default.createElement('b', { className: 'arrow' })
+                            ),
+                            _react2.default.createElement(
+                                'li',
+                                { className: '' },
+                                _react2.default.createElement(
+                                    'a',
+                                    { href: 'jquery-ui.html' },
+                                    _react2.default.createElement('i', { className: 'menu-icon fa fa-caret-right' }),
+                                    'jQuery UI'
+                                ),
+                                _react2.default.createElement('b', { className: 'arrow' })
+                            ),
+                            _react2.default.createElement(
+                                'li',
+                                { className: '' },
+                                _react2.default.createElement(
+                                    'a',
+                                    { href: 'nestable-list.html' },
+                                    _react2.default.createElement('i', { className: 'menu-icon fa fa-caret-right' }),
+                                    'Nestable Lists'
+                                ),
+                                _react2.default.createElement('b', { className: 'arrow' })
+                            ),
+                            _react2.default.createElement(
+                                'li',
+                                { className: '' },
+                                _react2.default.createElement(
+                                    'a',
+                                    { href: '#', className: 'dropdown-toggle' },
+                                    _react2.default.createElement('i', { className: 'menu-icon fa fa-caret-right' }),
+                                    'Three Level Menu',
+                                    _react2.default.createElement('b', { className: 'arrow fa fa-angle-down' })
+                                ),
+                                _react2.default.createElement('b', { className: 'arrow' }),
+                                _react2.default.createElement(
+                                    'ul',
+                                    { className: 'submenu' },
+                                    _react2.default.createElement(
+                                        'li',
+                                        { className: '' },
+                                        _react2.default.createElement(
+                                            'a',
+                                            { href: '#' },
+                                            _react2.default.createElement('i', { className: 'menu-icon fa fa-leaf green' }),
+                                            'Item #1'
+                                        ),
+                                        _react2.default.createElement('b', { className: 'arrow' })
+                                    ),
+                                    _react2.default.createElement(
+                                        'li',
+                                        { className: '' },
+                                        _react2.default.createElement(
+                                            'a',
+                                            { href: '#', className: 'dropdown-toggle' },
+                                            _react2.default.createElement('i', { className: 'menu-icon fa fa-pencil orange' }),
+                                            '4th level',
+                                            _react2.default.createElement('b', { className: 'arrow fa fa-angle-down' })
+                                        ),
+                                        _react2.default.createElement('b', { className: 'arrow' }),
+                                        _react2.default.createElement(
+                                            'ul',
+                                            { className: 'submenu' },
+                                            _react2.default.createElement(
+                                                'li',
+                                                { className: '' },
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#' },
+                                                    _react2.default.createElement('i', { className: 'menu-icon fa fa-plus purple' }),
+                                                    'Add Product'
+                                                ),
+                                                _react2.default.createElement('b', { className: 'arrow' })
+                                            ),
+                                            _react2.default.createElement(
+                                                'li',
+                                                { className: '' },
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { href: '#' },
+                                                    _react2.default.createElement('i', { className: 'menu-icon fa fa-eye pink' }),
+                                                    'View Products'
+                                                ),
+                                                _react2.default.createElement('b', { className: 'arrow' })
+                                            )
+                                        )
+                                    )
+                                )
+                            )
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'li',
+                        { className: 'Quiz' },
+                        _react2.default.createElement(
+                            'a',
+                            { href: '#', className: 'dropdown-toggle' },
+                            _react2.default.createElement('i', { className: 'menu-icon fa fa-list' }),
+                            _react2.default.createElement(
+                                'span',
+                                { className: 'menu-text' },
+                                ' Quiz '
+                            ),
+                            _react2.default.createElement('b', { className: 'arrow fa fa-angle-down' })
+                        ),
+                        _react2.default.createElement('b', { className: 'arrow' }),
+                        _react2.default.createElement(
+                            'ul',
+                            { className: 'submenu' },
+                            _react2.default.createElement(
+                                'li',
+                                { className: '' },
+                                _react2.default.createElement(
+                                    'a',
+                                    { href: 'quiz-dashboard.html' },
+                                    _react2.default.createElement('i', { className: 'menu-icon fa fa-caret-right' }),
+                                    'View all'
+                                ),
+                                _react2.default.createElement('b', { className: 'arrow' })
+                            ),
+                            _react2.default.createElement(
+                                'li',
+                                { className: '' },
+                                _react2.default.createElement(
+                                    'a',
+                                    { href: 'add-questions.html' },
+                                    _react2.default.createElement('i', { className: 'menu-icon fa fa-caret-right' }),
+                                    'Add Questions'
+                                ),
+                                _react2.default.createElement('b', { className: 'arrow' })
+                            ),
+                            _react2.default.createElement(
+                                'li',
+                                { className: '' },
+                                _react2.default.createElement(
+                                    'a',
+                                    { href: 'jqgrid.html' },
+                                    _react2.default.createElement('i', { className: 'menu-icon fa fa-caret-right' }),
+                                    'Subjects'
+                                ),
+                                _react2.default.createElement('b', { className: 'arrow' })
+                            ),
+                            _react2.default.createElement(
+                                'li',
+                                { className: 'Exams' },
+                                _react2.default.createElement(
+                                    'a',
+                                    { href: 'jqgrid.html' },
+                                    _react2.default.createElement('i', { className: 'menu-icon fa fa-caret-right' }),
+                                    'Exams'
+                                ),
+                                _react2.default.createElement('b', { className: 'arrow' })
+                            ),
+                            _react2.default.createElement(
+                                'li',
+                                { className: 'Reports' },
+                                _react2.default.createElement(
+                                    'a',
+                                    { href: 'jqgrid.html' },
+                                    _react2.default.createElement('i', { className: 'menu-icon fa fa-caret-right' }),
+                                    'Reports'
+                                ),
+                                _react2.default.createElement('b', { className: 'arrow' })
+                            )
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'li',
+                        { className: 'surveys' },
+                        _react2.default.createElement(
+                            'a',
+                            { href: 'surveys.html', className: 'dropdown-toggle' },
+                            _react2.default.createElement('i', { className: 'menu-icon fa fa-pencil-square-o' }),
+                            _react2.default.createElement(
+                                'span',
+                                { className: 'menu-text' },
+                                ' Surveys '
+                            ),
+                            _react2.default.createElement('b', { className: 'arrow fa fa-angle-down' })
+                        ),
+                        _react2.default.createElement('b', { className: 'arrow' }),
+                        _react2.default.createElement(
+                            'ul',
+                            { className: 'submenu' },
+                            _react2.default.createElement(
+                                'li',
+                                { className: '' },
+                                _react2.default.createElement(
+                                    'a',
+                                    { href: 'form-elements.html' },
+                                    _react2.default.createElement('i', { className: 'menu-icon fa fa-caret-right' }),
+                                    'View All'
+                                ),
+                                _react2.default.createElement('b', { className: 'arrow' })
+                            ),
+                            _react2.default.createElement(
+                                'li',
+                                { className: '' },
+                                _react2.default.createElement(
+                                    'a',
+                                    { href: 'form-elements-2.html' },
+                                    _react2.default.createElement('i', { className: 'menu-icon fa fa-caret-right' }),
+                                    'Add Survey'
+                                ),
+                                _react2.default.createElement('b', { className: 'arrow' })
+                            ),
+                            _react2.default.createElement(
+                                'li',
+                                { className: '' },
+                                _react2.default.createElement(
+                                    'a',
+                                    { href: 'form-wizard.html' },
+                                    _react2.default.createElement('i', { className: 'menu-icon fa fa-caret-right' }),
+                                    'Reports'
+                                ),
+                                _react2.default.createElement('b', { className: 'arrow' })
+                            )
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'li',
+                        { className: 'social media' },
+                        _react2.default.createElement(
+                            'a',
+                            { href: 'social.html', className: 'dropdown-toggle' },
+                            _react2.default.createElement('i', { className: 'menu-icon fa fa-pencil-square-o' }),
+                            _react2.default.createElement(
+                                'span',
+                                { className: 'menu-text' },
+                                ' Social Media '
+                            ),
+                            _react2.default.createElement('b', { className: 'arrow fa fa-angle-down' })
+                        ),
+                        _react2.default.createElement('b', { className: 'arrow' }),
+                        _react2.default.createElement(
+                            'ul',
+                            { className: 'submenu' },
+                            _react2.default.createElement(
+                                'li',
+                                { className: '' },
+                                _react2.default.createElement(
+                                    'a',
+                                    { href: 'form-elements.html' },
+                                    _react2.default.createElement('i', { className: 'menu-icon fa fa-caret-right' }),
+                                    'Form Elements'
+                                ),
+                                _react2.default.createElement('b', { className: 'arrow' })
+                            ),
+                            _react2.default.createElement(
+                                'li',
+                                { className: '' },
+                                _react2.default.createElement(
+                                    'a',
+                                    { href: 'form-elements-2.html' },
+                                    _react2.default.createElement('i', { className: 'menu-icon fa fa-caret-right' }),
+                                    'Form Elements 2'
+                                ),
+                                _react2.default.createElement('b', { className: 'arrow' })
+                            ),
+                            _react2.default.createElement(
+                                'li',
+                                { className: '' },
+                                _react2.default.createElement(
+                                    'a',
+                                    { href: 'form-wizard.html' },
+                                    _react2.default.createElement('i', { className: 'menu-icon fa fa-caret-right' }),
+                                    'Wizard & Validation'
+                                ),
+                                _react2.default.createElement('b', { className: 'arrow' })
+                            ),
+                            _react2.default.createElement(
+                                'li',
+                                { className: '' },
+                                _react2.default.createElement(
+                                    'a',
+                                    { href: 'wysiwyg.html' },
+                                    _react2.default.createElement('i', { className: 'menu-icon fa fa-caret-right' }),
+                                    'Wysiwyg & Markdown'
+                                ),
+                                _react2.default.createElement('b', { className: 'arrow' })
+                            ),
+                            _react2.default.createElement(
+                                'li',
+                                { className: '' },
+                                _react2.default.createElement(
+                                    'a',
+                                    { href: 'dropzone.html' },
+                                    _react2.default.createElement('i', { className: 'menu-icon fa fa-caret-right' }),
+                                    'Dropzone File Upload'
+                                ),
+                                _react2.default.createElement('b', { className: 'arrow' })
+                            )
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'li',
+                        { className: 'Calendar' },
+                        _react2.default.createElement(
+                            'a',
+                            { href: 'calendar.html' },
+                            _react2.default.createElement('i', { className: 'menu-icon fa fa-calendar' }),
+                            _react2.default.createElement(
+                                'span',
+                                { className: 'menu-text' },
+                                'Calendar',
+                                _react2.default.createElement(
+                                    'span',
+                                    { className: 'badge badge-transparent tooltip-error', title: '2 Important Events' },
+                                    _react2.default.createElement('i', { className: 'ace-icon fa fa-exclamation-triangle red bigger-130' })
+                                )
+                            )
+                        ),
+                        _react2.default.createElement('b', { className: 'arrow' })
+                    ),
+                    _react2.default.createElement(
+                        'li',
+                        { className: 'Users' },
+                        _react2.default.createElement(
+                            'a',
+                            { href: 'user.html', className: 'dropdown-toggle' },
+                            _react2.default.createElement('i', { className: 'menu-icon fa fa-pencil-square-o' }),
+                            _react2.default.createElement(
+                                'span',
+                                { className: 'menu-text' },
+                                ' Users '
+                            ),
+                            _react2.default.createElement('b', { className: 'arrow fa fa-angle-down' })
+                        ),
+                        _react2.default.createElement('b', { className: 'arrow' }),
+                        _react2.default.createElement(
+                            'ul',
+                            { className: 'submenu' },
+                            _react2.default.createElement(
+                                'li',
+                                { className: '' },
+                                _react2.default.createElement(
+                                    'a',
+                                    { href: 'form-elements.html' },
+                                    _react2.default.createElement('i', { className: 'menu-icon fa fa-caret-right' }),
+                                    'Form Elements'
+                                ),
+                                _react2.default.createElement('b', { className: 'arrow' })
+                            ),
+                            _react2.default.createElement(
+                                'li',
+                                { className: '' },
+                                _react2.default.createElement(
+                                    'a',
+                                    { href: 'form-elements-2.html' },
+                                    _react2.default.createElement('i', { className: 'menu-icon fa fa-caret-right' }),
+                                    'Form Elements 2'
+                                ),
+                                _react2.default.createElement('b', { className: 'arrow' })
+                            ),
+                            _react2.default.createElement(
+                                'li',
+                                { className: '' },
+                                _react2.default.createElement(
+                                    'a',
+                                    { href: 'form-wizard.html' },
+                                    _react2.default.createElement('i', { className: 'menu-icon fa fa-caret-right' }),
+                                    'Wizard & Validation'
+                                ),
+                                _react2.default.createElement('b', { className: 'arrow' })
+                            ),
+                            _react2.default.createElement(
+                                'li',
+                                { className: '' },
+                                _react2.default.createElement(
+                                    'a',
+                                    { href: 'wysiwyg.html' },
+                                    _react2.default.createElement('i', { className: 'menu-icon fa fa-caret-right' }),
+                                    'Wysiwyg & Markdown'
+                                ),
+                                _react2.default.createElement('b', { className: 'arrow' })
+                            ),
+                            _react2.default.createElement(
+                                'li',
+                                { className: '' },
+                                _react2.default.createElement(
+                                    'a',
+                                    { href: 'dropzone.html' },
+                                    _react2.default.createElement('i', { className: 'menu-icon fa fa-caret-right' }),
+                                    'Dropzone File Upload'
+                                ),
+                                _react2.default.createElement('b', { className: 'arrow' })
+                            )
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'li',
+                        { className: 'reports' },
+                        _react2.default.createElement(
+                            'a',
+                            { href: 'reports.html', className: 'dropdown-toggle' },
+                            _react2.default.createElement('i', { className: 'menu-icon fa fa-tag' }),
+                            _react2.default.createElement(
+                                'span',
+                                { className: 'menu-text' },
+                                'Reports'
+                            ),
+                            _react2.default.createElement('b', { className: 'arrow fa fa-angle-down' })
+                        ),
+                        _react2.default.createElement('b', { className: 'arrow' }),
+                        _react2.default.createElement(
+                            'ul',
+                            { className: 'submenu' },
+                            _react2.default.createElement(
+                                'li',
+                                { className: '' },
+                                _react2.default.createElement(
+                                    'a',
+                                    { href: 'profile.html' },
+                                    _react2.default.createElement('i', { className: 'menu-icon fa fa-caret-right' }),
+                                    'User Profile'
+                                ),
+                                _react2.default.createElement('b', { className: 'arrow' })
+                            ),
+                            _react2.default.createElement(
+                                'li',
+                                { className: '' },
+                                _react2.default.createElement(
+                                    'a',
+                                    { href: 'inbox.html' },
+                                    _react2.default.createElement('i', { className: 'menu-icon fa fa-caret-right' }),
+                                    'Inbox'
+                                ),
+                                _react2.default.createElement('b', { className: 'arrow' })
+                            ),
+                            _react2.default.createElement(
+                                'li',
+                                { className: '' },
+                                _react2.default.createElement(
+                                    'a',
+                                    { href: 'pricing.html' },
+                                    _react2.default.createElement('i', { className: 'menu-icon fa fa-caret-right' }),
+                                    'Pricing Tables'
+                                ),
+                                _react2.default.createElement('b', { className: 'arrow' })
+                            ),
+                            _react2.default.createElement(
+                                'li',
+                                { className: '' },
+                                _react2.default.createElement(
+                                    'a',
+                                    { href: 'invoice.html' },
+                                    _react2.default.createElement('i', { className: 'menu-icon fa fa-caret-right' }),
+                                    'Invoice'
+                                ),
+                                _react2.default.createElement('b', { className: 'arrow' })
+                            ),
+                            _react2.default.createElement(
+                                'li',
+                                { className: '' },
+                                _react2.default.createElement(
+                                    'a',
+                                    { href: 'timeline.html' },
+                                    _react2.default.createElement('i', { className: 'menu-icon fa fa-caret-right' }),
+                                    'Timeline'
+                                ),
+                                _react2.default.createElement('b', { className: 'arrow' })
+                            ),
+                            _react2.default.createElement(
+                                'li',
+                                { className: '' },
+                                _react2.default.createElement(
+                                    'a',
+                                    { href: 'search.html' },
+                                    _react2.default.createElement('i', { className: 'menu-icon fa fa-caret-right' }),
+                                    'Search Results'
+                                ),
+                                _react2.default.createElement('b', { className: 'arrow' })
+                            ),
+                            _react2.default.createElement(
+                                'li',
+                                { className: '' },
+                                _react2.default.createElement(
+                                    'a',
+                                    { href: 'email.html' },
+                                    _react2.default.createElement('i', { className: 'menu-icon fa fa-caret-right' }),
+                                    'Email Templates'
+                                ),
+                                _react2.default.createElement('b', { className: 'arrow' })
+                            ),
+                            _react2.default.createElement(
+                                'li',
+                                { className: '' },
+                                _react2.default.createElement(
+                                    'a',
+                                    { href: 'login.html' },
+                                    _react2.default.createElement('i', { className: 'menu-icon fa fa-caret-right' }),
+                                    'Login & Register'
+                                ),
+                                _react2.default.createElement('b', { className: 'arrow' })
+                            )
+                        )
+                    )
+                ),
+                _react2.default.createElement(
+                    'div',
+                    { className: 'sidebar-toggle sidebar-collapse', id: 'sidebar-collapse' },
+                    _react2.default.createElement('i', { id: 'sidebar-toggle-icon', className: 'ace-icon fa fa-angle-double-left ace-save-state', 'data-icon1': 'ace-icon fa fa-angle-double-left', 'data-icon2': 'ace-icon fa fa-angle-double-right' })
+                )
             );
         }
     }]);
 
-    return Footer;
+    return Navbar;
 }(_react2.default.Component);
 
-exports.default = Footer;
+exports.default = Navbar;
 
 /***/ }),
-/* 235 */
+/* 238 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+	value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -27505,811 +29171,179 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 /* FivestarHeader Component initialization */
-var Home = function (_React$Component) {
-  _inherits(Home, _React$Component);
+var Settings = function (_React$Component) {
+	_inherits(Settings, _React$Component);
 
-  /* Initializing objects of its FivestarHeader class */
-  function Home(props) {
-    _classCallCheck(this, Home);
+	/* Initializing objects of its FivestarHeader class */
+	function Settings(props) {
+		_classCallCheck(this, Settings);
 
-    /* FivestarHeader Component State variables Initialization */
-    var _this = _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).call(this, props));
+		/* FivestarHeader Component State variables Initialization */
+		var _this = _possibleConstructorReturn(this, (Settings.__proto__ || Object.getPrototypeOf(Settings)).call(this, props));
 
-    _this.state = {
-      activeIndex: 0
-    };
+		_this.state = {
+			activeIndex: 0
+		};
 
-    return _this;
-  }
+		return _this;
+	}
 
-  _createClass(Home, [{
-    key: 'componentDidMount',
-    value: function componentDidMount() {}
-  }, {
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'div',
-        null,
-        _react2.default.createElement(
-          'div',
-          { className: 'jumbotron text-center' },
-          _react2.default.createElement(
-            'h1',
-            null,
-            'MactoSoft'
-          ),
-          _react2.default.createElement(
-            'p',
-            null,
-            'We specialize in Java,Reactjs,Xamarin,Ionic'
-          ),
-          _react2.default.createElement(
-            'form',
-            null,
-            _react2.default.createElement(
-              'div',
-              { className: 'input-group' },
-              _react2.default.createElement('input', { type: 'email', className: 'form-control', size: '50', placeholder: 'Email Address', required: true }),
-              _react2.default.createElement(
-                'div',
-                { className: 'input-group-btn' },
-                _react2.default.createElement(
-                  'button',
-                  { type: 'button', className: 'btn btn-danger' },
-                  'Subscribe'
-                )
-              )
-            )
-          )
-        ),
-        _react2.default.createElement(
-          'div',
-          { id: 'about', className: 'container-fluid' },
-          _react2.default.createElement(
-            'div',
-            { className: 'row' },
-            _react2.default.createElement(
-              'div',
-              { className: 'col-sm-8' },
-              _react2.default.createElement(
-                'h2',
-                null,
-                'About Company Page'
-              ),
-              _react2.default.createElement('br', null),
-              _react2.default.createElement(
-                'h4',
-                null,
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-              ),
-              _react2.default.createElement('br', null),
-              _react2.default.createElement(
-                'p',
-                null,
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-              ),
-              _react2.default.createElement('br', null),
-              _react2.default.createElement(
-                'button',
-                { className: 'btn btn-default btn-lg' },
-                'Get in Touch'
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'col-sm-4' },
-              _react2.default.createElement('span', { className: 'glyphicon glyphicon-signal logo' })
-            )
-          )
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'container-fluid bg-grey' },
-          _react2.default.createElement(
-            'div',
-            { className: 'row' },
-            _react2.default.createElement(
-              'div',
-              { className: 'col-sm-4' },
-              _react2.default.createElement('span', { className: 'glyphicon glyphicon-globe logo slideanim' })
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'col-sm-8' },
-              _react2.default.createElement(
-                'h2',
-                null,
-                'Our Values'
-              ),
-              _react2.default.createElement('br', null),
-              _react2.default.createElement(
-                'h4',
-                null,
-                _react2.default.createElement(
-                  'strong',
-                  null,
-                  'MISSION:'
-                ),
-                ' Our mission lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-              ),
-              _react2.default.createElement('br', null),
-              _react2.default.createElement(
-                'p',
-                null,
-                _react2.default.createElement(
-                  'strong',
-                  null,
-                  'VISION:'
-                ),
-                ' Our vision Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-              )
-            )
-          )
-        ),
-        _react2.default.createElement(
-          'div',
-          { id: 'services', className: 'container-fluid text-center' },
-          _react2.default.createElement(
-            'h2',
-            null,
-            'SERVICES'
-          ),
-          _react2.default.createElement(
-            'h4',
-            null,
-            'What we offer'
-          ),
-          _react2.default.createElement('br', null),
-          _react2.default.createElement(
-            'div',
-            { className: 'row slideanim' },
-            _react2.default.createElement(
-              'div',
-              { className: 'col-sm-4' },
-              _react2.default.createElement('span', { className: 'glyphicon glyphicon-off logo-small' }),
-              _react2.default.createElement(
-                'h4',
-                null,
-                'POWER'
-              ),
-              _react2.default.createElement(
-                'p',
-                null,
-                'Lorem ipsum dolor sit amet..'
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'col-sm-4' },
-              _react2.default.createElement('span', { className: 'glyphicon glyphicon-heart logo-small' }),
-              _react2.default.createElement(
-                'h4',
-                null,
-                'LOVE'
-              ),
-              _react2.default.createElement(
-                'p',
-                null,
-                'Lorem ipsum dolor sit amet..'
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'col-sm-4' },
-              _react2.default.createElement('span', { className: 'glyphicon glyphicon-lock logo-small' }),
-              _react2.default.createElement(
-                'h4',
-                null,
-                'JOB DONE'
-              ),
-              _react2.default.createElement(
-                'p',
-                null,
-                'Lorem ipsum dolor sit amet..'
-              )
-            )
-          ),
-          _react2.default.createElement('br', null),
-          _react2.default.createElement('br', null),
-          _react2.default.createElement(
-            'div',
-            { className: 'row slideanim' },
-            _react2.default.createElement(
-              'div',
-              { className: 'col-sm-4' },
-              _react2.default.createElement('span', { className: 'glyphicon glyphicon-leaf logo-small' }),
-              _react2.default.createElement(
-                'h4',
-                null,
-                'GREEN'
-              ),
-              _react2.default.createElement(
-                'p',
-                null,
-                'Lorem ipsum dolor sit amet..'
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'col-sm-4' },
-              _react2.default.createElement('span', { className: 'glyphicon glyphicon-certificate logo-small' }),
-              _react2.default.createElement(
-                'h4',
-                null,
-                'CERTIFIED'
-              ),
-              _react2.default.createElement(
-                'p',
-                null,
-                'Lorem ipsum dolor sit amet..'
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'col-sm-4' },
-              _react2.default.createElement('span', { className: 'glyphicon glyphicon-wrench logo-small' }),
-              _react2.default.createElement(
-                'h4',
-                { style: { color: "#303030;" } },
-                'HARD WORK'
-              ),
-              _react2.default.createElement(
-                'p',
-                null,
-                'Lorem ipsum dolor sit amet..'
-              )
-            )
-          )
-        ),
-        _react2.default.createElement(
-          'div',
-          { id: 'portfolio', className: 'container-fluid text-center bg-grey' },
-          _react2.default.createElement(
-            'h2',
-            null,
-            'Portfolio'
-          ),
-          _react2.default.createElement('br', null),
-          _react2.default.createElement(
-            'h4',
-            null,
-            'What we have created'
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'row text-center slideanim' },
-            _react2.default.createElement(
-              'div',
-              { className: 'col-sm-4' },
-              _react2.default.createElement(
-                'div',
-                { className: 'thumbnail' },
-                _react2.default.createElement('img', { src: 'paris.jpg', alt: 'Paris', width: '400', height: '300' }),
-                _react2.default.createElement(
-                  'p',
-                  null,
-                  _react2.default.createElement(
-                    'strong',
-                    null,
-                    'Paris'
-                  )
-                ),
-                _react2.default.createElement(
-                  'p',
-                  null,
-                  'Yes, we built Paris'
-                )
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'col-sm-4' },
-              _react2.default.createElement(
-                'div',
-                { className: 'thumbnail' },
-                _react2.default.createElement('img', { src: 'newyork.jpg', alt: 'New York', width: '400', height: '300' }),
-                _react2.default.createElement(
-                  'p',
-                  null,
-                  _react2.default.createElement(
-                    'strong',
-                    null,
-                    'New York'
-                  )
-                ),
-                _react2.default.createElement(
-                  'p',
-                  null,
-                  'We built New York'
-                )
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'col-sm-4' },
-              _react2.default.createElement(
-                'div',
-                { className: 'thumbnail' },
-                _react2.default.createElement('img', { src: 'sanfran.jpg', alt: 'San Francisco', width: '400', height: '300' }),
-                _react2.default.createElement(
-                  'p',
-                  null,
-                  _react2.default.createElement(
-                    'strong',
-                    null,
-                    'San Francisco'
-                  )
-                ),
-                _react2.default.createElement(
-                  'p',
-                  null,
-                  'Yes, San Fran is ours'
-                )
-              )
-            )
-          ),
-          _react2.default.createElement('br', null),
-          _react2.default.createElement(
-            'h2',
-            null,
-            'What our customers say'
-          ),
-          _react2.default.createElement(
-            'div',
-            { id: 'myCarousel', className: 'carousel slide text-center', 'data-ride': 'carousel' },
-            _react2.default.createElement(
-              'ol',
-              { className: 'carousel-indicators' },
-              _react2.default.createElement('li', { 'data-target': '#myCarousel', 'data-slide-to': '0', className: 'active' }),
-              _react2.default.createElement('li', { 'data-target': '#myCarousel', 'data-slide-to': '1' }),
-              _react2.default.createElement('li', { 'data-target': '#myCarousel', 'data-slide-to': '2' })
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'carousel-inner', role: 'listbox' },
-              _react2.default.createElement(
-                'div',
-                { className: 'item active' },
-                _react2.default.createElement(
-                  'h4',
-                  null,
-                  '"This company is the best. I am so happy with the result!"',
-                  _react2.default.createElement('br', null),
-                  _react2.default.createElement(
-                    'span',
-                    null,
-                    'Michael Roe, Vice President, Comment Box'
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'item' },
-                _react2.default.createElement(
-                  'h4',
-                  null,
-                  '"One word... WOW!!"',
-                  _react2.default.createElement('br', null),
-                  _react2.default.createElement(
-                    'span',
-                    null,
-                    'John Doe, Salesman, Rep Inc'
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'item' },
-                _react2.default.createElement(
-                  'h4',
-                  null,
-                  '"Could I... BE any more happy with this company?"',
-                  _react2.default.createElement('br', null),
-                  _react2.default.createElement(
-                    'span',
-                    null,
-                    'Chandler Bing, Actor, FriendsAlot'
-                  )
-                )
-              )
-            ),
-            _react2.default.createElement(
-              'a',
-              { className: 'left carousel-control', href: '#myCarousel', role: 'button', 'data-slide': 'prev' },
-              _react2.default.createElement('span', { className: 'glyphicon glyphicon-chevron-left', 'aria-hidden': 'true' }),
-              _react2.default.createElement(
-                'span',
-                { className: 'sr-only' },
-                'Previous'
-              )
-            ),
-            _react2.default.createElement(
-              'a',
-              { className: 'right carousel-control', href: '#myCarousel', role: 'button', 'data-slide': 'next' },
-              _react2.default.createElement('span', { className: 'glyphicon glyphicon-chevron-right', 'aria-hidden': 'true' }),
-              _react2.default.createElement(
-                'span',
-                { className: 'sr-only' },
-                'Next'
-              )
-            )
-          )
-        ),
-        _react2.default.createElement(
-          'div',
-          { id: 'pricing', className: 'container-fluid' },
-          _react2.default.createElement(
-            'div',
-            { className: 'text-center' },
-            _react2.default.createElement(
-              'h2',
-              null,
-              'Pricing'
-            ),
-            _react2.default.createElement(
-              'h4',
-              null,
-              'Choose a payment plan that works for you'
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'row slideanim' },
-            _react2.default.createElement(
-              'div',
-              { className: 'col-sm-4 col-xs-12' },
-              _react2.default.createElement(
-                'div',
-                { className: 'panel panel-default text-center' },
-                _react2.default.createElement(
-                  'div',
-                  { className: 'panel-heading' },
-                  _react2.default.createElement(
-                    'h1',
-                    null,
-                    'Basic'
-                  )
-                ),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'panel-body' },
-                  _react2.default.createElement(
-                    'p',
-                    null,
-                    _react2.default.createElement(
-                      'strong',
-                      null,
-                      '20'
-                    ),
-                    ' Lorem'
-                  ),
-                  _react2.default.createElement(
-                    'p',
-                    null,
-                    _react2.default.createElement(
-                      'strong',
-                      null,
-                      '15'
-                    ),
-                    ' Ipsum'
-                  ),
-                  _react2.default.createElement(
-                    'p',
-                    null,
-                    _react2.default.createElement(
-                      'strong',
-                      null,
-                      '5'
-                    ),
-                    ' Dolor'
-                  ),
-                  _react2.default.createElement(
-                    'p',
-                    null,
-                    _react2.default.createElement(
-                      'strong',
-                      null,
-                      '2'
-                    ),
-                    ' Sit'
-                  ),
-                  _react2.default.createElement(
-                    'p',
-                    null,
-                    _react2.default.createElement(
-                      'strong',
-                      null,
-                      'Endless'
-                    ),
-                    ' Amet'
-                  )
-                ),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'panel-footer' },
-                  _react2.default.createElement(
-                    'h3',
-                    null,
-                    '$19'
-                  ),
-                  _react2.default.createElement(
-                    'h4',
-                    null,
-                    'per month'
-                  ),
-                  _react2.default.createElement(
-                    'button',
-                    { className: 'btn btn-lg' },
-                    'Sign Up'
-                  )
-                )
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'col-sm-4 col-xs-12' },
-              _react2.default.createElement(
-                'div',
-                { className: 'panel panel-default text-center' },
-                _react2.default.createElement(
-                  'div',
-                  { className: 'panel-heading' },
-                  _react2.default.createElement(
-                    'h1',
-                    null,
-                    'Pro'
-                  )
-                ),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'panel-body' },
-                  _react2.default.createElement(
-                    'p',
-                    null,
-                    _react2.default.createElement(
-                      'strong',
-                      null,
-                      '50'
-                    ),
-                    ' Lorem'
-                  ),
-                  _react2.default.createElement(
-                    'p',
-                    null,
-                    _react2.default.createElement(
-                      'strong',
-                      null,
-                      '25'
-                    ),
-                    ' Ipsum'
-                  ),
-                  _react2.default.createElement(
-                    'p',
-                    null,
-                    _react2.default.createElement(
-                      'strong',
-                      null,
-                      '10'
-                    ),
-                    ' Dolor'
-                  ),
-                  _react2.default.createElement(
-                    'p',
-                    null,
-                    _react2.default.createElement(
-                      'strong',
-                      null,
-                      '5'
-                    ),
-                    ' Sit'
-                  ),
-                  _react2.default.createElement(
-                    'p',
-                    null,
-                    _react2.default.createElement(
-                      'strong',
-                      null,
-                      'Endless'
-                    ),
-                    ' Amet'
-                  )
-                ),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'panel-footer' },
-                  _react2.default.createElement(
-                    'h3',
-                    null,
-                    '$29'
-                  ),
-                  _react2.default.createElement(
-                    'h4',
-                    null,
-                    'per month'
-                  ),
-                  _react2.default.createElement(
-                    'button',
-                    { className: 'btn btn-lg' },
-                    'Sign Up'
-                  )
-                )
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'col-sm-4 col-xs-12' },
-              _react2.default.createElement(
-                'div',
-                { className: 'panel panel-default text-center' },
-                _react2.default.createElement(
-                  'div',
-                  { className: 'panel-heading' },
-                  _react2.default.createElement(
-                    'h1',
-                    null,
-                    'Premium'
-                  )
-                ),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'panel-body' },
-                  _react2.default.createElement(
-                    'p',
-                    null,
-                    _react2.default.createElement(
-                      'strong',
-                      null,
-                      '100'
-                    ),
-                    ' Lorem'
-                  ),
-                  _react2.default.createElement(
-                    'p',
-                    null,
-                    _react2.default.createElement(
-                      'strong',
-                      null,
-                      '50'
-                    ),
-                    ' Ipsum'
-                  ),
-                  _react2.default.createElement(
-                    'p',
-                    null,
-                    _react2.default.createElement(
-                      'strong',
-                      null,
-                      '25'
-                    ),
-                    ' Dolor'
-                  ),
-                  _react2.default.createElement(
-                    'p',
-                    null,
-                    _react2.default.createElement(
-                      'strong',
-                      null,
-                      '10'
-                    ),
-                    ' Sit'
-                  ),
-                  _react2.default.createElement(
-                    'p',
-                    null,
-                    _react2.default.createElement(
-                      'strong',
-                      null,
-                      'Endless'
-                    ),
-                    ' Amet'
-                  )
-                ),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'panel-footer' },
-                  _react2.default.createElement(
-                    'h3',
-                    null,
-                    '$49'
-                  ),
-                  _react2.default.createElement(
-                    'h4',
-                    null,
-                    'per month'
-                  ),
-                  _react2.default.createElement(
-                    'button',
-                    { className: 'btn btn-lg' },
-                    'Sign Up'
-                  )
-                )
-              )
-            )
-          )
-        ),
-        _react2.default.createElement(
-          'div',
-          { id: 'contact', className: 'container-fluid bg-grey' },
-          _react2.default.createElement(
-            'h2',
-            { className: 'text-center' },
-            'CONTACT'
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'row' },
-            _react2.default.createElement(
-              'div',
-              { className: 'col-sm-5' },
-              _react2.default.createElement(
-                'p',
-                null,
-                'Contact us and we\'ll get back to you within 24 hours.'
-              ),
-              _react2.default.createElement(
-                'p',
-                null,
-                _react2.default.createElement('span', { className: 'glyphicon glyphicon-map-marker' }),
-                ' Chicago, US'
-              ),
-              _react2.default.createElement(
-                'p',
-                null,
-                _react2.default.createElement('span', { className: 'glyphicon glyphicon-phone' }),
-                ' +00 1515151515'
-              ),
-              _react2.default.createElement(
-                'p',
-                null,
-                _react2.default.createElement('span', { className: 'glyphicon glyphicon-envelope' }),
-                ' myemail@something.com'
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'col-sm-7 slideanim' },
-              _react2.default.createElement(
-                'div',
-                { className: 'row' },
-                _react2.default.createElement(
-                  'div',
-                  { className: 'col-sm-6 form-group' },
-                  _react2.default.createElement('input', { className: 'form-control', id: 'name', name: 'name', placeholder: 'Name', type: 'text', required: true })
-                ),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'col-sm-6 form-group' },
-                  _react2.default.createElement('input', { className: 'form-control', id: 'email', name: 'email', placeholder: 'Email', type: 'email', required: true })
-                )
-              ),
-              _react2.default.createElement('textarea', { className: 'form-control', id: 'comments', name: 'comments', placeholder: 'Comment', rows: '5' }),
-              _react2.default.createElement('br', null),
-              _react2.default.createElement(
-                'div',
-                { className: 'row' },
-                _react2.default.createElement(
-                  'div',
-                  { className: 'col-sm-12 form-group' },
-                  _react2.default.createElement(
-                    'button',
-                    { className: 'btn btn-default pull-right', type: 'submit' },
-                    'Send'
-                  )
-                )
-              )
-            )
-          )
-        ),
-        _react2.default.createElement('div', { id: 'googleMap', style: { height: "#400px;", width: "100%;" } })
-      );
-    }
-  }]);
+	_createClass(Settings, [{
+		key: 'componentDidMount',
+		value: function componentDidMount() {}
+	}, {
+		key: 'render',
+		value: function render() {
+			return _react2.default.createElement(
+				'div',
+				{ className: 'ace-settings-container', id: 'ace-settings-container' },
+				_react2.default.createElement(
+					'div',
+					{ className: 'btn btn-app btn-xs btn-warning ace-settings-btn', id: 'ace-settings-btn' },
+					_react2.default.createElement('i', { className: 'ace-icon fa fa-cog bigger-130' })
+				),
+				_react2.default.createElement(
+					'div',
+					{ className: 'ace-settings-box clearfix', id: 'ace-settings-box' },
+					_react2.default.createElement(
+						'div',
+						{ className: 'pull-left width-50' },
+						_react2.default.createElement(
+							'div',
+							{ className: 'ace-settings-item' },
+							_react2.default.createElement(
+								'div',
+								{ className: 'pull-left' },
+								_react2.default.createElement(
+									'select',
+									{ id: 'skin-colorpicker', className: 'hide' },
+									_react2.default.createElement(
+										'option',
+										{ 'data-skin': 'no-skin', value: '#438EB9' },
+										'#438EB9'
+									),
+									_react2.default.createElement(
+										'option',
+										{ 'data-skin': 'skin-1', value: '#222A2D' },
+										'#222A2D'
+									),
+									_react2.default.createElement(
+										'option',
+										{ 'data-skin': 'skin-2', value: '#C6487E' },
+										'#C6487E'
+									),
+									_react2.default.createElement(
+										'option',
+										{ 'data-skin': 'skin-3', value: '#D0D0D0' },
+										'#D0D0D0'
+									)
+								)
+							),
+							_react2.default.createElement(
+								'span',
+								null,
+								'\xA0 Choose Skin'
+							)
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'ace-settings-item' },
+							_react2.default.createElement('input', { type: 'checkbox', className: 'ace ace-checkbox-2 ace-save-state', id: 'ace-settings-navbar', autoComplete: 'off' }),
+							_react2.default.createElement(
+								'label',
+								{ className: 'lbl', htmlFor: 'ace-settings-navbar' },
+								' Fixed Navbar'
+							)
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'ace-settings-item' },
+							_react2.default.createElement('input', { type: 'checkbox', className: 'ace ace-checkbox-2 ace-save-state', id: 'ace-settings-sidebar', autoComplete: 'off' }),
+							_react2.default.createElement(
+								'label',
+								{ className: 'lbl', htmlFor: 'ace-settings-sidebar' },
+								' Fixed Sidebar'
+							)
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'ace-settings-item' },
+							_react2.default.createElement('input', { type: 'checkbox', className: 'ace ace-checkbox-2 ace-save-state', id: 'ace-settings-breadcrumbs', autoComplete: 'off' }),
+							_react2.default.createElement(
+								'label',
+								{ className: 'lbl', htmlFor: 'ace-settings-breadcrumbs' },
+								' Fixed Breadcrumbs'
+							)
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'ace-settings-item' },
+							_react2.default.createElement('input', { type: 'checkbox', className: 'ace ace-checkbox-2', id: 'ace-settings-rtl', autoComplete: 'off' }),
+							_react2.default.createElement(
+								'label',
+								{ className: 'lbl', htmlFor: 'ace-settings-rtl' },
+								' Right To Left (rtl)'
+							)
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'ace-settings-item' },
+							_react2.default.createElement('input', { type: 'checkbox', className: 'ace ace-checkbox-2 ace-save-state', id: 'ace-settings-add-container', autoComplete: 'off' }),
+							_react2.default.createElement(
+								'label',
+								{ className: 'lbl', htmlFor: 'ace-settings-add-container' },
+								'Inside',
+								_react2.default.createElement(
+									'b',
+									null,
+									'.container'
+								)
+							)
+						)
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'pull-left width-50' },
+						_react2.default.createElement(
+							'div',
+							{ className: 'ace-settings-item' },
+							_react2.default.createElement('input', { type: 'checkbox', className: 'ace ace-checkbox-2', id: 'ace-settings-hover', autoComplete: 'off' }),
+							_react2.default.createElement(
+								'label',
+								{ className: 'lbl', htmlFor: 'ace-settings-hover' },
+								' Submenu on Hover'
+							)
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'ace-settings-item' },
+							_react2.default.createElement('input', { type: 'checkbox', className: 'ace ace-checkbox-2', id: 'ace-settings-compact', autoComplete: 'off' }),
+							_react2.default.createElement(
+								'label',
+								{ className: 'lbl', htmlFor: 'ace-settings-compact' },
+								' Compact Sidebar'
+							)
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'ace-settings-item' },
+							_react2.default.createElement('input', { type: 'checkbox', className: 'ace ace-checkbox-2', id: 'ace-settings-highlight', autoComplete: 'off' }),
+							_react2.default.createElement(
+								'label',
+								{ className: 'lbl', htmlFor: 'ace-settings-highlight' },
+								' Alt. Active Item'
+							)
+						)
+					)
+				)
+			);
+		}
+	}]);
 
-  return Home;
+	return Settings;
 }(_react2.default.Component);
 
-exports.default = Home;
+exports.default = Settings;
 
 /***/ })
 /******/ ]);

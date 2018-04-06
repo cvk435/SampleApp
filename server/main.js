@@ -5,15 +5,18 @@ var cookieParser = require('cookie-parser');
 var cors = require('cors');
 
 
-
+// var Authentication = require('../routes/authentication')
 const app = express();
-const port =80;
+const port =8081;
 
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use('/', express.static(__dirname + "/../public"));
+// app.use('/user',Authentication)
+
+
 
 app.use(function(req, res, next) {
   res.setHeader('Access-Control-Allow-Origin', '*');
