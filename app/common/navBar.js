@@ -262,7 +262,7 @@
                 </li>
 
                 <li className="Quiz">
-                    <a href="#" className="dropdown-toggle">
+                    <a className="dropdown-toggle">
                         <i className="menu-icon fa fa-list"></i>
                         <span className="menu-text"> Quiz </span>
 
@@ -273,20 +273,19 @@
 
                     <ul className="submenu">
                         <li className="">
-                            <a href="quiz-dashboard.html">
+                           <Link to="/admin/all-questions">
                                 <i className="menu-icon fa fa-caret-right"></i>
                                 View all
-                            </a>
+                            </Link>
 
                             <b className="arrow"></b>
                         </li>
 
                         <li className="">
-                            <a href="add-questions.html">
+                           <Link to="/admin/add-question">
                                 <i className="menu-icon fa fa-caret-right"></i>
                                 Add Questions
-                            </a>
-
+                            </Link>
                             <b className="arrow"></b>
                         </li>
                         <li className="">
@@ -328,10 +327,10 @@
 
                     <ul className="submenu">
                         <li className="">
-                            <a href="form-elements.html">
+                           <Link to="/all-questions">
                                 <i className="menu-icon fa fa-caret-right"></i>
                                 View All
-                            </a>
+                            </Link>
 
                             <b className="arrow"></b>
                         </li>

@@ -5,7 +5,9 @@ var cookieParser = require('cookie-parser');
 var cors = require('cors');
 
 
-// var Authentication = require('../routes/authentication')
+var Authentication = require('../routes/authentication')
+var QuizQuestions = require('../routes/quizquestions')
+
 const app = express();
 const port =8081;
 
@@ -14,7 +16,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use('/', express.static(__dirname + "/../public"));
-// app.use('/user',Authentication)
+app.use('/users',Authentication)
+app.use('/quiz',QuizQuestions)
 
 
 

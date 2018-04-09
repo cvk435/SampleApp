@@ -14,7 +14,12 @@
    
        }
        componentDidMount() {
-       }
+	   }
+	  
+	   logout() {
+		localStorage.clear();
+		location.href = '/admin/login'
+	}
        render() {
            return (
                <div>
@@ -324,7 +329,7 @@
 								<li className="divider"></li>
 
 								<li>
-									<a href="#">
+									<a onClick={this.logout.bind(this)}>
 										<i className="ace-icon fa fa-power-off"></i>
 										Logout
 									</a>
