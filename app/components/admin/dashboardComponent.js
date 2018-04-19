@@ -8,6 +8,7 @@
    import Header from '../../common/header';
    import Footer from '../../common/footer';
    import Dashboard from './dashboard';
+   import $ from "jquery";
    /* FivestarHeader Component initialization */
    class DashboardComponent extends React.Component {
      /* Initializing objects of its FivestarHeader class */
@@ -19,7 +20,9 @@
            }
    
        }
-       componentDidMount() {
+       componentWillMount() {
+        $("#yen").addClass("no-skin");
+        $("#yen").removeClass("login-layout light-login");
        }
        render() {
            return (

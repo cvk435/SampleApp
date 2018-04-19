@@ -1,1 +1,1 @@
-# SampleApp
+mssql login details :root,macto

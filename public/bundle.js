@@ -9753,6 +9753,10 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(10);
 
+var _loadjs = __webpack_require__(377);
+
+var _loadjs2 = _interopRequireDefault(_loadjs);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -9763,6 +9767,8 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   inside FivestarHeader component */
 
 
+//    import './assets/js/ace.min.js';
+//    import './assets/js/ace-elements.min.js';
 /* FivestarHeader Component initialization */
 var Navbar = function (_React$Component) {
     _inherits(Navbar, _React$Component);
@@ -9783,7 +9789,9 @@ var Navbar = function (_React$Component) {
 
     _createClass(Navbar, [{
         key: 'componentDidMount',
-        value: function componentDidMount() {}
+        value: async function componentDidMount() {
+            await (0, _loadjs2.default)('/assets/js/ace.min.js');
+        }
     }, {
         key: 'render',
         value: function render() {
@@ -10601,11 +10609,11 @@ var Header = function (_React$Component) {
 							{ className: 'navbar-header pull-left' },
 							_react2.default.createElement(
 								'a',
-								{ href: 'index.html', className: 'navbar-brand' },
+								{ className: 'navbar-brand' },
 								_react2.default.createElement(
 									'small',
 									null,
-									_react2.default.createElement('img', { src: 'assets/images/logo/yencash-white.png' })
+									_react2.default.createElement('img', { src: '/assets/images/logo/yencash-white.png' })
 								)
 							)
 						),
@@ -10920,7 +10928,7 @@ var Header = function (_React$Component) {
 													_react2.default.createElement(
 														'a',
 														{ href: '#', className: 'clearfix' },
-														_react2.default.createElement('img', { src: 'assets/images/avatars/avatar.png', className: 'msg-photo', alt: 'Alex\'s Avatar' }),
+														_react2.default.createElement('img', { src: '/assets/images/avatars/avatar.png', className: 'msg-photo', alt: 'Alex\'s Avatar' }),
 														_react2.default.createElement(
 															'span',
 															{ className: 'msg-body' },
@@ -10953,7 +10961,7 @@ var Header = function (_React$Component) {
 													_react2.default.createElement(
 														'a',
 														{ href: '#', className: 'clearfix' },
-														_react2.default.createElement('img', { src: 'assets/images/avatars/avatar3.png', className: 'msg-photo', alt: 'Susan\'s Avatar' }),
+														_react2.default.createElement('img', { src: '/assets/images/avatars/avatar3.png', className: 'msg-photo', alt: 'Susan\'s Avatar' }),
 														_react2.default.createElement(
 															'span',
 															{ className: 'msg-body' },
@@ -10986,7 +10994,7 @@ var Header = function (_React$Component) {
 													_react2.default.createElement(
 														'a',
 														{ href: '#', className: 'clearfix' },
-														_react2.default.createElement('img', { src: 'assets/images/avatars/avatar4.png', className: 'msg-photo', alt: 'Bob\'s Avatar' }),
+														_react2.default.createElement('img', { src: '/assets/images/avatars/avatar4.png', className: 'msg-photo', alt: 'Bob\'s Avatar' }),
 														_react2.default.createElement(
 															'span',
 															{ className: 'msg-body' },
@@ -11019,7 +11027,7 @@ var Header = function (_React$Component) {
 													_react2.default.createElement(
 														'a',
 														{ href: '#', className: 'clearfix' },
-														_react2.default.createElement('img', { src: 'assets/images/avatars/avatar2.png', className: 'msg-photo', alt: 'Kate\'s Avatar' }),
+														_react2.default.createElement('img', { src: '/assets/images/avatars/avatar2.png', className: 'msg-photo', alt: 'Kate\'s Avatar' }),
 														_react2.default.createElement(
 															'span',
 															{ className: 'msg-body' },
@@ -11052,7 +11060,7 @@ var Header = function (_React$Component) {
 													_react2.default.createElement(
 														'a',
 														{ href: '#', className: 'clearfix' },
-														_react2.default.createElement('img', { src: 'assets/images/avatars/avatar5.png', className: 'msg-photo', alt: 'Fred\'s Avatar' }),
+														_react2.default.createElement('img', { src: '/assets/images/avatars/avatar5.png', className: 'msg-photo', alt: 'Fred\'s Avatar' }),
 														_react2.default.createElement(
 															'span',
 															{ className: 'msg-body' },
@@ -11099,7 +11107,7 @@ var Header = function (_React$Component) {
 									_react2.default.createElement(
 										'a',
 										{ 'data-toggle': 'dropdown', href: '#', className: 'dropdown-toggle' },
-										_react2.default.createElement('img', { className: 'nav-user-photo', src: 'assets/images/avatars/user.jpg', alt: 'Jason\'s Photo' }),
+										_react2.default.createElement('img', { className: 'nav-user-photo', src: '/assets/images/avatars/user.jpg', alt: 'Jason\'s Photo' }),
 										_react2.default.createElement(
 											'span',
 											{ className: 'user-info' },
@@ -11141,7 +11149,7 @@ var Header = function (_React$Component) {
 											null,
 											_react2.default.createElement(
 												'a',
-												{ onClick: this.logout.bind(this) },
+												{ style: { cursor: 'Pointer' }, onClick: this.logout.bind(this) },
 												_react2.default.createElement('i', { className: 'ace-icon fa fa-power-off' }),
 												'Logout'
 											)
@@ -13648,6 +13656,10 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(10);
 
+var _loadjs = __webpack_require__(377);
+
+var _loadjs2 = _interopRequireDefault(_loadjs);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -13677,8 +13689,8 @@ var Settings = function (_React$Component) {
 	}
 
 	_createClass(Settings, [{
-		key: 'componentDidMount',
-		value: function componentDidMount() {}
+		key: 'componentWillMount',
+		value: async function componentWillMount() {}
 	}, {
 		key: 'render',
 		value: function render() {
@@ -49825,6 +49837,10 @@ var _dashboard = __webpack_require__(371);
 
 var _dashboard2 = _interopRequireDefault(_dashboard);
 
+var _jquery = __webpack_require__(374);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -49854,8 +49870,11 @@ var DashboardComponent = function (_React$Component) {
     }
 
     _createClass(DashboardComponent, [{
-        key: 'componentDidMount',
-        value: function componentDidMount() {}
+        key: 'componentWillMount',
+        value: function componentWillMount() {
+            (0, _jquery2.default)("#yen").addClass("no-skin");
+            (0, _jquery2.default)("#yen").removeClass("login-layout light-login");
+        }
     }, {
         key: 'render',
         value: function render() {
@@ -50123,8 +50142,13 @@ var login = function (_React$Component) {
       }
     }
   }, {
-    key: 'componentDidMount',
-    value: function componentDidMount() {}
+    key: 'componentWillMount',
+    value: function componentWillMount() {
+      (0, _jquery2.default)(document).ready(function () {
+        (0, _jquery2.default)("#yen").removeClass("no-skin");
+        (0, _jquery2.default)("#yen").addClass("login-layout light-login");
+      });
+    }
   }, {
     key: 'render',
     value: function render() {
@@ -50133,52 +50157,112 @@ var login = function (_React$Component) {
         null,
         _react2.default.createElement(
           'div',
-          { className: 'container col-xs-3' },
+          { className: 'main-container' },
           _react2.default.createElement(
-            'h2',
-            null,
-            'Yencash'
-          ),
-          _react2.default.createElement(
-            'h1',
-            { style: { color: this.state.color } },
-            this.state.message
-          ),
-          _react2.default.createElement(
-            'form',
-            null,
+            'div',
+            { className: 'main-content' },
             _react2.default.createElement(
               'div',
-              { className: 'form-group ' },
+              { className: 'row' },
               _react2.default.createElement(
-                'label',
-                { htmlFor: 'email' },
-                'Email:'
-              ),
-              _react2.default.createElement('input', { type: 'text', className: 'form-control', placeholder: 'Employee No', name: 'userno', value: this.state.userNo, onChange: this.setValue.bind(this, 'userNo') })
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'form-group' },
-              _react2.default.createElement(
-                'label',
-                { htmlFor: 'pwd' },
-                'Password:'
-              ),
-              _react2.default.createElement('input', { type: 'password', className: 'form-control', placeholder: 'Enter password', name: 'pwd', value: this.state.password, onChange: this.setValue.bind(this, 'password') })
-            ),
-            _react2.default.createElement(
-              'button',
-              { type: 'submit', className: 'btn btn-default', onClick: this.login.bind(this) },
-              'Login'
-            ),
-            _react2.default.createElement(
-              _reactRouterDom.Link,
-              { to: '/register' },
-              _react2.default.createElement(
-                'button',
-                { type: 'submit', className: 'btn btn-default' },
-                'Register'
+                'div',
+                { className: 'col-sm-10 col-sm-offset-1' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'login-container' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'center' },
+                    _react2.default.createElement(
+                      'h1',
+                      null,
+                      _react2.default.createElement('img', { src: '/assets/images/logo/yencash-logo.png' })
+                    ),
+                    _react2.default.createElement(
+                      'h4',
+                      { className: 'blue', id: 'id-company-text' },
+                      '\xA9 Mactosoft'
+                    )
+                  ),
+                  _react2.default.createElement('div', { className: 'space-6' }),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'position-relative' },
+                    _react2.default.createElement(
+                      'div',
+                      { id: 'login-box', className: 'login-box visible widget-box no-border' },
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'widget-body' },
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'widget-main' },
+                          _react2.default.createElement(
+                            'h4',
+                            { className: 'header blue lighter bigger' },
+                            _react2.default.createElement('i', { className: 'ace-icon fa fa-coffee green' }),
+                            'Please Enter Your Information'
+                          ),
+                          _react2.default.createElement('div', { className: 'space-6' }),
+                          _react2.default.createElement(
+                            'form',
+                            null,
+                            _react2.default.createElement(
+                              'fieldset',
+                              null,
+                              _react2.default.createElement(
+                                'label',
+                                { className: 'block clearfix' },
+                                _react2.default.createElement(
+                                  'span',
+                                  { className: 'block input-icon input-icon-right' },
+                                  _react2.default.createElement('input', { type: 'text', className: 'form-control', placeholder: 'Employee No', name: 'userno', value: this.state.userNo, onChange: this.setValue.bind(this, 'userNo') }),
+                                  _react2.default.createElement('i', { className: 'ace-icon fa fa-user' })
+                                )
+                              ),
+                              _react2.default.createElement(
+                                'label',
+                                { className: 'block clearfix' },
+                                _react2.default.createElement(
+                                  'span',
+                                  { className: 'block input-icon input-icon-right' },
+                                  _react2.default.createElement('input', { type: 'password', className: 'form-control', placeholder: 'Enter password', name: 'pwd', value: this.state.password, onChange: this.setValue.bind(this, 'password') }),
+                                  _react2.default.createElement('i', { className: 'ace-icon fa fa-lock' })
+                                )
+                              ),
+                              _react2.default.createElement('div', { className: 'space' }),
+                              _react2.default.createElement(
+                                'div',
+                                { className: 'clearfix' },
+                                _react2.default.createElement(
+                                  'label',
+                                  { className: 'inline' },
+                                  _react2.default.createElement('input', { type: 'checkbox', className: 'ace' }),
+                                  _react2.default.createElement(
+                                    'span',
+                                    { className: 'lbl' },
+                                    ' Remember Me'
+                                  )
+                                ),
+                                _react2.default.createElement(
+                                  'button',
+                                  { type: 'submit', className: 'width-35 pull-right btn btn-sm btn-primary', onClick: this.login.bind(this) },
+                                  _react2.default.createElement('i', { className: 'ace-icon fa fa-key' }),
+                                  _react2.default.createElement(
+                                    'span',
+                                    { className: 'bigger-110' },
+                                    'Login'
+                                  )
+                                )
+                              ),
+                              _react2.default.createElement('div', { className: 'space-4' })
+                            )
+                          )
+                        )
+                      )
+                    )
+                  )
+                )
               )
             )
           )
@@ -60307,6 +60391,299 @@ var register = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = register;
+
+/***/ }),
+/* 377 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+(function (root, factory) {
+  if (true) {
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+  } else if ((typeof exports === 'undefined' ? 'undefined' : _typeof(exports)) === 'object') {
+    module.exports = factory();
+  } else {
+    root.loadjs = factory();
+  }
+})(undefined, function () {
+  /**
+   * Global dependencies.
+   * @global {Object} document - DOM
+   */
+
+  var devnull = function devnull() {},
+      bundleIdCache = {},
+      bundleResultCache = {},
+      bundleCallbackQueue = {};
+
+  /**
+   * Subscribe to bundle load event.
+   * @param {string[]} bundleIds - Bundle ids
+   * @param {Function} callbackFn - The callback function
+   */
+  function subscribe(bundleIds, callbackFn) {
+    // listify
+    bundleIds = bundleIds.push ? bundleIds : [bundleIds];
+
+    var depsNotFound = [],
+        i = bundleIds.length,
+        numWaiting = i,
+        fn,
+        bundleId,
+        r,
+        q;
+
+    // define callback function
+    fn = function fn(bundleId, pathsNotFound) {
+      if (pathsNotFound.length) depsNotFound.push(bundleId);
+
+      numWaiting--;
+      if (!numWaiting) callbackFn(depsNotFound);
+    };
+
+    // register callback
+    while (i--) {
+      bundleId = bundleIds[i];
+
+      // execute callback if in result cache
+      r = bundleResultCache[bundleId];
+      if (r) {
+        fn(bundleId, r);
+        continue;
+      }
+
+      // add to callback queue
+      q = bundleCallbackQueue[bundleId] = bundleCallbackQueue[bundleId] || [];
+      q.push(fn);
+    }
+  }
+
+  /**
+   * Publish bundle load event.
+   * @param {string} bundleId - Bundle id
+   * @param {string[]} pathsNotFound - List of files not found
+   */
+  function publish(bundleId, pathsNotFound) {
+    // exit if id isn't defined
+    if (!bundleId) return;
+
+    var q = bundleCallbackQueue[bundleId];
+
+    // cache result
+    bundleResultCache[bundleId] = pathsNotFound;
+
+    // exit if queue is empty
+    if (!q) return;
+
+    // empty callback queue
+    while (q.length) {
+      q[0](bundleId, pathsNotFound);
+      q.splice(0, 1);
+    }
+  }
+
+  /**
+   * Execute callbacks.
+   * @param {Object or Function} args - The callback args
+   * @param {string[]} depsNotFound - List of dependencies not found
+   */
+  function executeCallbacks(args, depsNotFound) {
+    // accept function as argument
+    if (args.call) args = { success: args };
+
+    // success and error callbacks
+    if (depsNotFound.length) (args.error || devnull)(depsNotFound);else (args.success || devnull)(args);
+  }
+
+  /**
+   * Load individual file.
+   * @param {string} path - The file path
+   * @param {Function} callbackFn - The callback function
+   */
+  function loadFile(path, callbackFn, args, numTries) {
+    var doc = document,
+        async = args.async,
+        maxTries = (args.numRetries || 0) + 1,
+        beforeCallbackFn = args.before || devnull,
+        pathStripped = path.replace(/^(css|img)!/, ''),
+        isCss,
+        e;
+
+    numTries = numTries || 0;
+
+    if (/(^css!|\.css$)/.test(path)) {
+      isCss = true;
+
+      // css
+      e = doc.createElement('link');
+      e.rel = 'stylesheet';
+      e.href = pathStripped; //.replace(/^css!/, '');  // remove "css!" prefix
+    } else if (/(^img!|\.(png|gif|jpg|svg)$)/.test(path)) {
+      // image
+      e = doc.createElement('img');
+      e.src = pathStripped;
+    } else {
+      // javascript
+      e = doc.createElement('script');
+      e.src = path;
+      e.async = async === undefined ? true : async;
+    }
+
+    e.onload = e.onerror = e.onbeforeload = function (ev) {
+      var result = ev.type[0];
+
+      // Note: The following code isolates IE using `hideFocus` and treats empty
+      // stylesheets as failures to get around lack of onerror support
+      if (isCss && 'hideFocus' in e) {
+        try {
+          if (!e.sheet.cssText.length) result = 'e';
+        } catch (x) {
+          // sheets objects created from load errors don't allow access to
+          // `cssText`
+          result = 'e';
+        }
+      }
+
+      // handle retries in case of load failure
+      if (result == 'e') {
+        // increment counter
+        numTries += 1;
+
+        // exit function and try again
+        if (numTries < maxTries) {
+          return loadFile(path, callbackFn, args, numTries);
+        }
+      }
+
+      // execute callback
+      callbackFn(path, result, ev.defaultPrevented);
+    };
+
+    // add to document (unless callback returns `false`)
+    if (beforeCallbackFn(path, e) !== false) doc.head.appendChild(e);
+  }
+
+  /**
+   * Load multiple files.
+   * @param {string[]} paths - The file paths
+   * @param {Function} callbackFn - The callback function
+   */
+  function loadFiles(paths, callbackFn, args) {
+    // listify paths
+    paths = paths.push ? paths : [paths];
+
+    var numWaiting = paths.length,
+        x = numWaiting,
+        pathsNotFound = [],
+        fn,
+        i;
+
+    // define callback function
+    fn = function fn(path, result, defaultPrevented) {
+      // handle error
+      if (result == 'e') pathsNotFound.push(path);
+
+      // handle beforeload event. If defaultPrevented then that means the load
+      // will be blocked (ex. Ghostery/ABP on Safari)
+      if (result == 'b') {
+        if (defaultPrevented) pathsNotFound.push(path);else return;
+      }
+
+      numWaiting--;
+      if (!numWaiting) callbackFn(pathsNotFound);
+    };
+
+    // load scripts
+    for (i = 0; i < x; i++) {
+      loadFile(paths[i], fn, args);
+    }
+  }
+
+  /**
+   * Initiate script load and register bundle.
+   * @param {(string|string[])} paths - The file paths
+   * @param {(string|Function)} [arg1] - The bundleId or success callback
+   * @param {Function} [arg2] - The success or error callback
+   * @param {Function} [arg3] - The error callback
+   */
+  function loadjs(paths, arg1, arg2) {
+    var bundleId, args;
+
+    // bundleId (if string)
+    if (arg1 && arg1.trim) bundleId = arg1;
+
+    // args (default is {})
+    args = (bundleId ? arg2 : arg1) || {};
+
+    // throw error if bundle is already defined
+    if (bundleId) {
+      if (bundleId in bundleIdCache) {
+        throw "LoadJS";
+      } else {
+        bundleIdCache[bundleId] = true;
+      }
+    }
+
+    // load scripts
+    loadFiles(paths, function (pathsNotFound) {
+      // execute callbacks
+      executeCallbacks(args, pathsNotFound);
+
+      // publish bundle load event
+      publish(bundleId, pathsNotFound);
+    }, args);
+  }
+
+  /**
+   * Execute callbacks when dependencies have been satisfied.
+   * @param {(string|string[])} deps - List of bundle ids
+   * @param {Object} args - success/error arguments
+   */
+  loadjs.ready = function ready(deps, args) {
+    // subscribe to bundle load event
+    subscribe(deps, function (depsNotFound) {
+      // execute callbacks
+      executeCallbacks(args, depsNotFound);
+    });
+
+    return loadjs;
+  };
+
+  /**
+   * Manually satisfy bundle dependencies.
+   * @param {string} bundleId - The bundle id
+   */
+  loadjs.done = function done(bundleId) {
+    publish(bundleId, []);
+  };
+
+  /**
+   * Reset loadjs dependencies statuses
+   */
+  loadjs.reset = function reset() {
+    bundleIdCache = {};
+    bundleResultCache = {};
+    bundleCallbackQueue = {};
+  };
+
+  /**
+   * Determine if bundle has already been defined
+   * @param String} bundleId - The bundle id
+   */
+  loadjs.isDefined = function isDefined(bundleId) {
+    return bundleId in bundleIdCache;
+  };
+
+  // export
+  return loadjs;
+});
 
 /***/ })
 /******/ ]);

@@ -2,7 +2,6 @@
    inside FivestarHeader component */
    import React from 'react';
    import {Link} from 'react-router-dom';
-
    /* FivestarHeader Component initialization */
    class Search extends React.Component {
      /* Initializing objects of its FivestarHeader class */

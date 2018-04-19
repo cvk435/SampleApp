@@ -19,7 +19,7 @@ var  authentication= {
         })},
 
         userLogin: function (data,callback) {
-            console.log(data)
+         
             db.query("select * from EmpTable where EmployeeId=? and Password=?",[data.userNo,data.password ],function(err,rows){
                 if(rows.length>0){
                     callback({status:200,messsage:'Employee Logined Successfully',rows})

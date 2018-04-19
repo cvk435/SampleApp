@@ -2,7 +2,7 @@
    inside FivestarHeader component */
    import React from 'react';
    import {Link} from 'react-router-dom';
-
+   import Loadjs from 'loadjs';
    /* FivestarHeader Component initialization */
    class Settings extends React.Component {
      /* Initializing objects of its FivestarHeader class */
@@ -14,7 +14,8 @@
            }
    
        }
-       componentDidMount() {
+       async componentWillMount() {
+
        }
        render() {
            return (

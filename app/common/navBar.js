@@ -2,6 +2,9 @@
    inside FivestarHeader component */
    import React from 'react';
    import {Link} from 'react-router-dom';
+   import Loadjs from 'loadjs';
+//    import './assets/js/ace.min.js';
+//    import './assets/js/ace-elements.min.js';
    /* FivestarHeader Component initialization */
    class Navbar extends React.Component {
      /* Initializing objects of its FivestarHeader class */
@@ -13,10 +16,13 @@
            }
    
        }
-       componentDidMount() {
+       async componentDidMount() {
+        await Loadjs('/assets/js/ace.min.js');
+        
        }
        render() {
            return (
+               
             <div id="sidebar" className="sidebar responsive ace-save-state">
             <script type="text/javascript">
                 try{ace.settings.loadState('sidebar')}catch(e){}

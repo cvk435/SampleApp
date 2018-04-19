@@ -36,9 +36,9 @@
 				</button>
 
 				<div className="navbar-header pull-left">
-					<a href="index.html" className="navbar-brand">
+					<a className="navbar-brand">
 						<small>
-							<img src="assets/images/logo/yencash-white.png"/>
+							<img src="/assets/images/logo/yencash-white.png"/>
 						</small>
 					</a>
 				</div>
@@ -206,7 +206,7 @@
 									<ul className="dropdown-menu dropdown-navbar">
 										<li>
 											<a href="#" className="clearfix">
-												<img src="assets/images/avatars/avatar.png" className="msg-photo" alt="Alex's Avatar" />
+												<img src="/assets/images/avatars/avatar.png" className="msg-photo" alt="Alex's Avatar" />
 												<span className="msg-body">
 													<span className="msg-title">
 														<span className="blue">Alex:</span>
@@ -223,7 +223,7 @@
 
 										<li>
 											<a href="#" className="clearfix">
-												<img src="assets/images/avatars/avatar3.png" className="msg-photo" alt="Susan's Avatar" />
+												<img src="/assets/images/avatars/avatar3.png" className="msg-photo" alt="Susan's Avatar" />
 												<span className="msg-body">
 													<span className="msg-title">
 														<span className="blue">Susan:</span>
@@ -240,7 +240,7 @@
 
 										<li>
 											<a href="#" className="clearfix">
-												<img src="assets/images/avatars/avatar4.png" className="msg-photo" alt="Bob's Avatar" />
+												<img src="/assets/images/avatars/avatar4.png" className="msg-photo" alt="Bob's Avatar" />
 												<span className="msg-body">
 													<span className="msg-title">
 														<span className="blue">Bob:</span>
@@ -257,7 +257,7 @@
 
 										<li>
 											<a href="#" className="clearfix">
-												<img src="assets/images/avatars/avatar2.png" className="msg-photo" alt="Kate's Avatar" />
+												<img src="/assets/images/avatars/avatar2.png" className="msg-photo" alt="Kate's Avatar" />
 												<span className="msg-body">
 													<span className="msg-title">
 														<span className="blue">Kate:</span>
@@ -274,7 +274,7 @@
 
 										<li>
 											<a href="#" className="clearfix">
-												<img src="assets/images/avatars/avatar5.png" className="msg-photo" alt="Fred's Avatar" />
+												<img src="/assets/images/avatars/avatar5.png" className="msg-photo" alt="Fred's Avatar" />
 												<span className="msg-body">
 													<span className="msg-title">
 														<span className="blue">Fred:</span>
@@ -302,7 +302,7 @@
 
 						<li className="light-blue dropdown-modal">
 							<a data-toggle="dropdown" href="#" className="dropdown-toggle">
-								<img className="nav-user-photo" src="assets/images/avatars/user.jpg" alt="Jason's Photo" />
+								<img className="nav-user-photo" src="/assets/images/avatars/user.jpg" alt="Jason's Photo" />
 								<span className="user-info">
 									<small>Welcome,</small>
 									Jason
@@ -329,7 +329,7 @@
 								<li className="divider"></li>
 
 								<li>
-									<a onClick={this.logout.bind(this)}>
+									<a style={{cursor:'Pointer'}} onClick={this.logout.bind(this)}>
 										<i className="ace-icon fa fa-power-off"></i>
 										Logout
 									</a>
