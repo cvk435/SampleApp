@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 20, 2018 at 06:56 PM
+-- Generation Time: Apr 20, 2018 at 07:46 PM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 5.6.31
 
@@ -80,13 +80,13 @@ CREATE TABLE `Questions` (
   `OptionB` varchar(250) DEFAULT '',
   `OptionC` varchar(250) DEFAULT '',
   `RightAnswer` varchar(250) DEFAULT '',
-  `NoViews` int(12) DEFAULT NULL,
+  `NoViews` int(12) DEFAULT '0',
   `Status` varchar(250) DEFAULT '',
   `Subject` varchar(250) DEFAULT '',
-  `PostedBy` int(12) DEFAULT NULL,
-  `postedDate` datetime DEFAULT NULL,
-  `ModifiedDate` datetime DEFAULT NULL,
-  `ModifiedBy` int(12) DEFAULT NULL
+  `PostedBy` int(12) DEFAULT '0',
+  `postedDate` datetime DEFAULT CURRENT_TIMESTAMP,
+  `ModifiedDate` datetime DEFAULT CURRENT_TIMESTAMP,
+  `ModifiedBy` int(12) DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
