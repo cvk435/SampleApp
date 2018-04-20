@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 09, 2018 at 06:11 PM
+-- Generation Time: Apr 20, 2018 at 06:56 PM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 5.6.31
 
@@ -75,14 +75,14 @@ INSERT INTO `EmpTable` (`Name`, `Password`, `Role`, `CreatedBy`, `CreateDate`, `
 
 CREATE TABLE `Questions` (
   `Qid` int(12) NOT NULL,
-  `Question` varchar(250) DEFAULT NULL,
-  `OptionA` varchar(250) DEFAULT NULL,
-  `OptionB` varchar(250) DEFAULT NULL,
-  `OptionC` varchar(250) DEFAULT NULL,
-  `RightAnswer` varchar(250) DEFAULT NULL,
+  `Question` varchar(250) DEFAULT '',
+  `OptionA` varchar(250) DEFAULT '',
+  `OptionB` varchar(250) DEFAULT '',
+  `OptionC` varchar(250) DEFAULT '',
+  `RightAnswer` varchar(250) DEFAULT '',
   `NoViews` int(12) DEFAULT NULL,
-  `Status` varchar(250) DEFAULT NULL,
-  `Subject` varchar(250) DEFAULT NULL,
+  `Status` varchar(250) DEFAULT '',
+  `Subject` varchar(250) DEFAULT '',
   `PostedBy` int(12) DEFAULT NULL,
   `postedDate` datetime DEFAULT NULL,
   `ModifiedDate` datetime DEFAULT NULL,
