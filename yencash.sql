@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 21, 2018 at 07:57 AM
+-- Generation Time: Apr 21, 2018 at 08:21 AM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 5.6.31
 
@@ -129,7 +129,9 @@ ALTER TABLE `EmpTable`
 -- Indexes for table `Questions`
 --
 ALTER TABLE `Questions`
-  ADD PRIMARY KEY (`Qid`);
+  ADD PRIMARY KEY (`Qid`),
+  ADD UNIQUE KEY `Qid_2` (`Qid`),
+  ADD KEY `Qid` (`Qid`);
 
 --
 -- Indexes for table `Websiteusers`
