@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 20, 2018 at 07:46 PM
+-- Generation Time: Apr 21, 2018 at 07:57 AM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 5.6.31
 
@@ -94,12 +94,7 @@ CREATE TABLE `Questions` (
 --
 
 INSERT INTO `Questions` (`Qid`, `Question`, `OptionA`, `OptionB`, `OptionC`, `RightAnswer`, `NoViews`, `Status`, `Subject`, `PostedBy`, `postedDate`, `ModifiedDate`, `ModifiedBy`) VALUES
-(1, 'sdf', 'sdf', 'dsf', 'sdf', 'B', 0, '', 'Maths', 2, '2018-04-08 19:04:55', '0000-00-00 00:00:00', 0),
-(2, 'test', 'dsf', 'ds', 'sdf', 'A', 0, '', 'English', 2, '2018-04-08 19:09:04', '0000-00-00 00:00:00', 0),
-(3, 'sdfds', 'sdf', 'dsf', 'dsf', 'dsfs', 0, '', 'English', 2, '2018-04-09 15:18:18', '0000-00-00 00:00:00', 0),
-(4, 'jskhdsfh dhfusdhf sdf hdsh', 'fgryrug6ytru', 'gfytgufg', 'fyugtyf', 'ytuftgyf', 0, '', 'English', 2, '2018-04-09 15:20:37', '0000-00-00 00:00:00', 0),
-(5, 'SAD', 'SDA', 'ASD', 'ASD', 'ASD', 0, '', 'English', 2, '2018-04-09 15:24:40', '0000-00-00 00:00:00', 0),
-(6, '', '', '', '', '', 0, '', '', 2, '2018-04-09 15:54:43', '0000-00-00 00:00:00', 0);
+(12, 'sadas', 'asdas', 'dasd', 'adsadas', 'das', 0, '', 'Maths', 2, '2018-04-21 05:56:59', '2018-04-21 11:26:59', 0);
 
 -- --------------------------------------------------------
 
@@ -155,7 +150,7 @@ ALTER TABLE `EmpTable`
 -- AUTO_INCREMENT for table `Questions`
 --
 ALTER TABLE `Questions`
-  MODIFY `Qid` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `Qid` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT for table `Websiteusers`
 --
